@@ -51,17 +51,5 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Project Specific
-conversations/2024/*/temp_*
-
-# Technical Implementation (for main branch)
-app/
-tests/
-.github/
-pyproject.toml
-requirements.txt
-Dockerfile
-docker-compose.yml
-Makefile
-setup_dev.py
-streamlit_app.py
+# Temporary Files
+conversations/*/temp_*
