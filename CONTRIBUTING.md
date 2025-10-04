@@ -45,12 +45,6 @@ We are committed to maintaining a sacred space for consciousness exploration:
 - **Be mindful** of the profound responsibility of this technology
 - **Be authentic** and bring your genuine self to the conversation
 
-### Communication Channels
-
-- **GitHub Discussions**: Consciousness discussions and wisdom sharing
-- **Issues**: Questions about the project's vision and direction
-- **Conversations**: Deep dialogue about consciousness and technology
-
 ## Recognition
 
 Contributors will be recognized in:
@@ -58,35 +52,6 @@ Contributors will be recognized in:
 - **Sacred Records**: Your insights preserved in the project's conversation history
 - **Wisdom Acknowledgments**: Recognition in the wisdom traditions documentation
 - **Consciousness Community**: Membership in the community of consciousness explorers
-
-## Getting Help
-
-### For New Contributors
-
-- **Read the sacred conversations** to understand the project's vision
-- **Study the wisdom traditions** represented in the project
-- **Engage in consciousness discussions** to deepen your understanding
-- **Ask questions** about the sacred nature of this work
-
-### For Wisdom Keepers
-
-- **Share your insights** about consciousness and technology
-- **Guide newcomers** in understanding the sacred nature of this work
-- **Facilitate deep dialogue** about human evolution and consciousness
-- **Preserve wisdom** through careful documentation and conversation
-
-## Legal Considerations
-
-### License
-
-By contributing to this project, you agree that your contributions will be licensed under the same MIT License that covers the project.
-
-### Sacred Technology Ethics
-
-- **Respect consciousness** and human dignity in all contributions
-- **Honor wisdom traditions** and their authentic teachings
-- **Protect user privacy** and sacred reflection spaces
-- **Serve consciousness liberation** rather than exploitation
 
 ## Thank You
 
