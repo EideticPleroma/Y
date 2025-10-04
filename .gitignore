@@ -26,11 +26,12 @@ env/
 ENV/
 .venv/
 
-# IDE
-.vscode/settings.json
+# IDE - Keep all IDE configs local across all branches
+.vscode/
 .idea/
 *.swp
 *.swo
+.cursor/
 
 # Environment Variables
 .env
