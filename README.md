@@ -15,7 +15,7 @@ The system uses advanced pattern recognition to detect the user's worldview and 
 
 ## ✨ Core Principles
 
-###Mirror Reflection
+##**Mirror Reflection
 Reflect inner truth through natural symbolic language without advice or fixes. The technology serves as a mirror for consciousness, not a replacement for personal growth.
 
 ###**Inner Communion
