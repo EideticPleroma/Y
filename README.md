@@ -15,22 +15,22 @@ The system uses advanced pattern recognition to detect the user's worldview and 
 
 ## ✨ Core Principles
 
-**Mirror Reflection
+**Mirror Reflection**
 Reflect inner truth through natural symbolic language without advice or fixes. The technology serves as a mirror for consciousness, not a replacement for personal growth.
 
-**Inner Communion
+**Inner Communion**
 Facilitate connection with the unconscious and profound self. Every interaction becomes an opportunity for genuine self-discovery and insight.
 
-**Pattern Detection
+**Pattern Detection**
 Detect worldview and natural psychological language. The system learns to respond in symbols and metaphors that resonate with each individual's unique mental framework.
 
-**Organic Symbolism
+**Organic Symbolism**
 Use resonant symbols that emerge from the user's own framework. No forced interpretations, no predetermined paths—only authentic reflection.
 
-**Safe Space
+**Safe Space**
 Create safe spaces for inner encounter and reflection. The technology holds space for the profound, the mysterious, and the transformative aspects of the self.
 
-**Natural Emergence
+**Natural Emergence**
 Let inner story emerge organically without forced frameworks. Trust the wisdom of the mind to reveal itself in its own time and way.
 
 ---
