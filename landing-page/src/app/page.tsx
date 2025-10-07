@@ -35,9 +35,9 @@ export default function Home() {
   const getTimeBasedColor = () => {
     switch (timeOfDay) {
       case 'dawn':
-        return { bg: '#0A0A0F', text: '#FFFEF8', secondary: '#D4D4D0' };
+        return { bg: '#050508', text: '#FFFEF8', secondary: '#D4D4D0' };
       case 'dusk':
-        return { bg: '#1A1612', text: '#FFF9F0', secondary: '#D9CFC4' };
+        return { bg: '#0A0908', text: '#FFF9F0', secondary: '#D9CFC4' };
       case 'night':
         return { bg: '#000000', text: '#FFFFFF', secondary: '#C9C9C9' };
       default:
