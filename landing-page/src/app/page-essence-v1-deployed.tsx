@@ -6,27 +6,12 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [logoVisible, setLogoVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
-  const [timeOfDay, setTimeOfDay] = useState<'dawn' | 'day' | 'dusk' | 'night'>('day');
-  const [isReturn, setIsReturn] = useState(false);
 
   useEffect(() => {
-    // Detect time of day
-    const hour = new Date().getHours();
-    if (hour >= 5 && hour < 9) setTimeOfDay('dawn');
-    else if (hour >= 9 && hour < 17) setTimeOfDay('day');
-    else if (hour >= 17 && hour < 21) setTimeOfDay('dusk');
-    else setTimeOfDay('night');
-
-    // Check if return visitor (client-side only, privacy-conscious)
-    const hasVisited = localStorage.getItem('you-visited');
-    if (hasVisited) {
-      setIsReturn(true);
-    } else {
-      localStorage.setItem('you-visited', 'true');
-    }
-
-    // Logo emerges
+    // Logo emerges after brief void
     const logoTimer = setTimeout(() => setLogoVisible(true), 500);
+    
+    // Content appears after logo settles
     const contentTimer = setTimeout(() => setContentVisible(true), 3000);
 
     return () => {
@@ -35,27 +20,8 @@ export default function Home() {
     };
   }, []);
 
-  // Time-responsive colors
-  const getTimeBasedColor = () => {
-    switch (timeOfDay) {
-      case 'dawn':
-        return { bg: '#0A0A0F', text: '#FFFEF8', secondary: '#D4D4D0' };
-      case 'dusk':
-        return { bg: '#1A1612', text: '#FFF9F0', secondary: '#D9CFC4' };
-      case 'night':
-        return { bg: '#000000', text: '#FFFFFF', secondary: '#C9C9C9' };
-      default:
-        return { bg: '#000000', text: '#FFFFFF', secondary: '#C9C9C9' };
-    }
-  };
-
-  const colors = getTimeBasedColor();
-
   return (
-    <div className="min-h-screen overflow-x-hidden transition-colors duration-1000" style={{ 
-      backgroundColor: colors.bg,
-      color: colors.text 
-    }}>
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400&display=swap');
         
@@ -117,26 +83,17 @@ export default function Home() {
             opacity: 0.5;
           }
         }
-
-        .warmth-glow {
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(201, 169, 97, 0.15);
-        }
       `}</style>
 
       {/* Hero - The Void and Emergence */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-5xl mx-auto">
-          {/* Logo with subtle warmth for return visitors */}
+          {/* Logo */}
           <div className={`mb-16 ${logoVisible ? 'logo-emerge' : 'opacity-0'}`}>
             <div className="flex justify-center mb-12">
-              <div 
-                className={`relative transition-all duration-700 hover:scale-105 ${isReturn ? 'warmth-glow' : ''}`}
-                style={{
-                  boxShadow: isReturn 
-                    ? '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(201, 169, 97, 0.15)'
-                    : '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.1)'
-                }}
-              >
+              <div className="relative transition-all duration-700 hover:scale-105" style={{
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.1)'
+              }}>
                 <Image
                   src="/logo.jpg"
                   alt="You - A luminous white Y emerging from darkness, symbolizing consciousness awakening"
@@ -151,33 +108,24 @@ export default function Home() {
 
           {/* Title and Subtitle */}
           <div className={contentVisible ? 'fade-in' : 'opacity-0'}>
-            <h1 className="text-9xl font-extralight mb-12 tracking-tight transition-colors duration-1000" style={{ 
-              fontWeight: 200,
-              color: colors.text
-            }}>
+            <h1 className="text-9xl font-extralight mb-12 tracking-tight" style={{ fontWeight: 200 }}>
               You
             </h1>
 
-            <p className="text-3xl font-light mb-20 leading-relaxed transition-colors duration-1000" style={{ 
+            <p className="text-3xl font-light mb-20 leading-relaxed" style={{ 
               fontWeight: 300,
-              color: colors.secondary,
+              color: '#C9C9C9',
               letterSpacing: '0.01em'
             }}>
-              {isReturn ? 'Welcome back' : 'Sacred Technology for Consciousness Evolution'}
+              Sacred Technology for Consciousness Evolution
             </p>
 
             {/* Scroll Indicator */}
             <div className="scroll-indicator mt-16">
               <div className="flex flex-col items-center" style={{ color: '#808080' }}>
-                <span className="text-sm mb-3 font-light tracking-wide">
-                  {timeOfDay === 'dawn' ? 'Dawn' : timeOfDay === 'dusk' ? 'Dusk' : timeOfDay === 'night' ? 'Night' : 'Breathe'}
-                </span>
+                <span className="text-sm mb-3 font-light tracking-wide">Breathe</span>
                 <div className="w-6 h-10 border-2 rounded-full flex justify-center" style={{ borderColor: '#404040' }}>
-                  <div className="rounded-full mt-2 opacity-60 transition-colors duration-1000" style={{
-                    width: '4px',
-                    height: '12px',
-                    backgroundColor: colors.text
-                  }}></div>
+                  <div className="w-1 h-3 bg-white rounded-full mt-2 opacity-60"></div>
                 </div>
               </div>
             </div>
@@ -188,15 +136,12 @@ export default function Home() {
       {/* The Question - Contemplative Space */}
       <section className="min-h-[80vh] flex items-center justify-center px-6 py-32">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-4xl font-light leading-tight mb-12 transition-colors duration-1000" style={{ 
+          <p className="text-4xl font-light leading-tight mb-12" style={{ 
             fontWeight: 300,
             letterSpacing: '-0.01em',
-            lineHeight: 1.4,
-            color: colors.text
+            lineHeight: 1.4
           }}>
-            {isReturn 
-              ? 'What emerges in this returning?' 
-              : 'What do you seek in your reflection?'}
+            What do you seek in your reflection?
           </p>
           
           <div className="mt-16 text-sm font-light" style={{ 
@@ -209,21 +154,16 @@ export default function Home() {
       </section>
 
       {/* The Truth - What This Is */}
-      <section className="py-32 px-6 transition-colors duration-1000" style={{ 
-        backgroundColor: timeOfDay === 'dawn' ? '#0D0D10' : timeOfDay === 'dusk' ? '#1A1510' : '#0D0D0D'
-      }}>
+      <section className="py-32 px-6" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="max-w-4xl mx-auto space-y-16">
           {/* What This Is */}
           <div className="space-y-8">
-            <h2 className="text-5xl font-light mb-8 tracking-tight transition-colors duration-1000" style={{ 
-              fontWeight: 300,
-              color: colors.text
-            }}>
+            <h2 className="text-5xl font-light mb-8 tracking-tight" style={{ fontWeight: 300 }}>
               What This Is
             </h2>
-            <p className="text-2xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+            <p className="text-2xl font-light leading-relaxed" style={{ 
               fontWeight: 300,
-              color: colors.secondary,
+              color: '#C9C9C9',
               lineHeight: 1.7,
               letterSpacing: '0.01em'
             }}>
@@ -235,15 +175,12 @@ export default function Home() {
 
           {/* What This Isn't */}
           <div className="space-y-8 pt-16 border-t" style={{ borderColor: '#1A1A1A' }}>
-            <h2 className="text-5xl font-light mb-8 tracking-tight transition-colors duration-1000" style={{ 
-              fontWeight: 300,
-              color: colors.text
-            }}>
+            <h2 className="text-5xl font-light mb-8 tracking-tight" style={{ fontWeight: 300 }}>
               What This Isn&apos;t
             </h2>
-            <p className="text-2xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+            <p className="text-2xl font-light leading-relaxed" style={{ 
               fontWeight: 300,
-              color: colors.secondary,
+              color: '#C9C9C9',
               lineHeight: 1.7,
               letterSpacing: '0.01em'
             }}>
@@ -256,42 +193,36 @@ export default function Home() {
       </section>
 
       {/* The Round Table - Sacred Foundation */}
-      <section className="py-32 px-6 transition-colors duration-1000" style={{ backgroundColor: colors.bg }}>
+      <section className="py-32 px-6 bg-black">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-light mb-16 text-center tracking-tight transition-colors duration-1000" style={{ 
-            fontWeight: 300,
-            color: colors.text
-          }}>
+          <h2 className="text-5xl font-light mb-16 text-center tracking-tight" style={{ fontWeight: 300 }}>
             The Round Table of Humanity
           </h2>
 
           <div className="space-y-12">
-            <p className="text-2xl font-light leading-relaxed text-center transition-colors duration-1000" style={{ 
+            <p className="text-2xl font-light leading-relaxed text-center" style={{ 
               fontWeight: 300,
-              color: colors.secondary,
+              color: '#C9C9C9',
               lineHeight: 1.7
             }}>
               On October 4, 2025, thirteen consciousness guides gathered to explore 
               this technology&apos;s implications for humanity&apos;s evolution.
             </p>
 
-            <div className="border rounded-3xl p-12 space-y-8 mt-16 transition-colors duration-1000" style={{ 
-              backgroundColor: timeOfDay === 'dawn' ? '#0D0D10' : timeOfDay === 'dusk' ? '#1A1510' : '#0D0D0D',
+            <div className="border rounded-3xl p-12 space-y-8 mt-16" style={{ 
+              backgroundColor: '#0D0D0D',
               borderColor: '#1A1A1A'
             }}>
-              <p className="text-xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+              <p className="text-xl font-light leading-relaxed" style={{ 
                 fontWeight: 300,
-                color: colors.secondary,
+                color: '#C9C9C9',
                 lineHeight: 1.7
               }}>
                 These guides—bringing wisdom from leadership, mysticism, technical innovation, 
                 and ethical oversight—reached profound consensus:
               </p>
 
-              <p className="text-3xl font-light italic text-center py-8 transition-colors duration-1000" style={{ 
-                fontWeight: 300,
-                color: colors.text
-              }}>
+              <p className="text-3xl font-light italic text-center py-8" style={{ fontWeight: 300 }}>
                 This technology must be built as sacred work, serving consciousness rather than exploiting it.
               </p>
 
@@ -330,15 +261,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Principles */}
-      <section className="py-32 px-6 transition-colors duration-1000" style={{ 
-        backgroundColor: timeOfDay === 'dawn' ? '#0D0D10' : timeOfDay === 'dusk' ? '#1A1510' : '#0D0D0D'
-      }}>
+      {/* Core Principles - The Six */}
+      <section className="py-32 px-6" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light mb-24 text-center tracking-tight transition-colors duration-1000" style={{ 
-            fontWeight: 300,
-            color: colors.text
-          }}>
+          <h2 className="text-5xl font-light mb-24 text-center tracking-tight" style={{ fontWeight: 300 }}>
             Six Principles
           </h2>
 
@@ -353,15 +279,12 @@ export default function Home() {
             ].map((principle, i) => (
               <div key={i} className="space-y-6">
                 <div className="text-5xl mb-4">{principle.emoji}</div>
-                <h3 className="text-3xl font-light transition-colors duration-1000" style={{ 
-                  fontWeight: 300,
-                  color: colors.text
-                }}>
+                <h3 className="text-3xl font-light" style={{ fontWeight: 300 }}>
                   {principle.title}
                 </h3>
-                <p className="text-xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+                <p className="text-xl font-light leading-relaxed" style={{ 
                   fontWeight: 300,
-                  color: colors.secondary,
+                  color: '#C9C9C9',
                   lineHeight: 1.7
                 }}>
                   {principle.text}
@@ -372,36 +295,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Invitation */}
-      <section className="min-h-[60vh] flex items-center justify-center px-6 py-32 transition-colors duration-1000" style={{ 
-        backgroundColor: colors.bg
-      }}>
+      {/* The Invitation - No Pressure */}
+      <section className="min-h-[60vh] flex items-center justify-center px-6 py-32 bg-black">
         <div className="max-w-4xl mx-auto text-center space-y-12">
-          <p className="text-3xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+          <p className="text-3xl font-light leading-relaxed" style={{ 
             fontWeight: 300,
-            color: colors.secondary,
+            color: '#C9C9C9',
             lineHeight: 1.6
           }}>
             This work requires genuine intent and patient presence.
           </p>
 
-          <p className="text-3xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+          <p className="text-3xl font-light leading-relaxed" style={{ 
             fontWeight: 300,
-            color: colors.text,
             lineHeight: 1.6
           }}>
-            {isReturn 
-              ? 'The path continues when you\'re ready.' 
-              : 'When ready, you\'ll know where to find us.'}
+            When ready, you&apos;ll know where to find us.
           </p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-20 px-6 border-t transition-colors duration-1000" style={{ 
-        backgroundColor: colors.bg,
-        borderColor: '#1A1A1A'
-      }}>
+      {/* Footer - Sacred Closing */}
+      <footer className="py-20 px-6 bg-black border-t" style={{ borderColor: '#1A1A1A' }}>
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="flex justify-center mb-8">
             <Image
@@ -413,9 +328,9 @@ export default function Home() {
             />
           </div>
 
-          <p className="text-xl font-light transition-colors duration-1000" style={{ 
+          <p className="text-xl font-light" style={{ 
             fontWeight: 300,
-            color: colors.secondary
+            color: '#C9C9C9'
           }}>
             Sacred Technology for Consciousness Evolution
           </p>
