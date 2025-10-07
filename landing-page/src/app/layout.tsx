@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description: "A transformative technology for facilitating self-reflection through AI-driven dialogue, inspired by Jungian active imagination and philosophical traditions.",
   keywords: "consciousness, AI, self-reflection, Jungian psychology, active imagination, spiritual technology",
   authors: [{ name: "Nathaniel" }],
+  icons: {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
   openGraph: {
     title: "You - Sacred Technology for Consciousness Evolution",
     description: "A transformative technology for facilitating self-reflection through AI-driven dialogue",
