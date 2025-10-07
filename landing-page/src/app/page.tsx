@@ -114,9 +114,6 @@ export default function Home() {
           }
         }
 
-        .warmth-glow {
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(201, 169, 97, 0.15);
-        }
       `}</style>
 
       {/* Hero - The Void and Emergence */}
@@ -125,7 +122,7 @@ export default function Home() {
           <div className={`mb-12 ${logoVisible ? 'logo-emerge' : 'opacity-0'}`}>
             <div className="flex justify-center mb-10">
               <div 
-                className={`relative transition-all duration-700 hover:scale-105 ${isReturn ? 'warmth-glow' : ''}`}
+                className="relative transition-all duration-700 hover:scale-105"
               >
         <Image
                   src="/logo.jpg"
