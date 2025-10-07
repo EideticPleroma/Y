@@ -118,24 +118,20 @@ export default function Home() {
 
       {/* Hero - The Void and Emergence */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
-        <div className="text-center max-w-5xl mx-auto">
-          <div className={`mb-12 ${logoVisible ? 'logo-emerge' : 'opacity-0'}`}>
-            <div className="flex justify-center mb-10">
-              <div 
-                className="relative transition-all duration-700 hover:scale-105"
-              >
-        <Image
-                  src="/logo.jpg"
-                  alt="You - A luminous white Y emerging from darkness, symbolizing consciousness awakening"
-                  width={280}
-                  height={280}
-                  className="rounded-full"
-          priority
-        />
-              </div>
-            </div>
+        <div className="text-center w-full">
+          {/* Logo */}
+          <div className={`mb-16 ${logoVisible ? 'logo-emerge' : 'opacity-0'}`}>
+            <Image
+              src="/logo.jpg"
+              alt="You - A luminous white Y emerging from darkness, symbolizing consciousness awakening"
+              width={280}
+              height={280}
+              className="rounded-full mx-auto transition-all duration-700 hover:scale-105"
+              priority
+            />
           </div>
 
+          {/* Content */}
           <div className={contentVisible ? 'fade-in' : 'opacity-0'}>
             <h1 className="text-9xl font-extralight mb-8 tracking-tight transition-colors duration-1000" style={{ 
               fontWeight: 200,
@@ -144,7 +140,7 @@ export default function Home() {
               You
             </h1>
 
-            <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000 text-center" style={{ 
+            <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000" style={{ 
               fontWeight: 300,
               color: colors.secondary,
               letterSpacing: isReturn ? '0.08em' : '0.01em'
@@ -152,18 +148,17 @@ export default function Home() {
               {isReturn ? 'Welcome back' : 'Sacred Technology for Consciousness Evolution'}
             </p>
 
-            <div className="scroll-indicator mt-12">
-              <div className="flex flex-col items-center" style={{ color: '#808080' }}>
-                <span className="text-sm mb-3 font-light tracking-wide">
-                  {timeOfDay === 'dawn' ? 'Dawn' : timeOfDay === 'dusk' ? 'Dusk' : timeOfDay === 'night' ? 'Night' : 'Breathe'}
-                </span>
-                <div className="w-6 h-10 border-2 rounded-full flex justify-center" style={{ borderColor: '#404040' }}>
-                  <div className="rounded-full mt-2 opacity-60 transition-colors duration-1000" style={{
-                    width: '4px',
-                    height: '12px',
-                    backgroundColor: colors.text
-                  }}></div>
-                </div>
+            {/* Scroll Indicator */}
+            <div className="scroll-indicator mt-16 flex flex-col items-center" style={{ color: '#808080' }}>
+              <span className="text-sm mb-3 font-light tracking-wide">
+                {timeOfDay === 'dawn' ? 'Dawn' : timeOfDay === 'dusk' ? 'Dusk' : timeOfDay === 'night' ? 'Night' : 'Breathe'}
+              </span>
+              <div className="w-6 h-10 border-2 rounded-full flex justify-center" style={{ borderColor: '#404040' }}>
+                <div className="rounded-full mt-2 opacity-60 transition-colors duration-1000" style={{
+                  width: '4px',
+                  height: '12px',
+                  backgroundColor: colors.text
+                }}></div>
               </div>
             </div>
           </div>
