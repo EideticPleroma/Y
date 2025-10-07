@@ -1,0 +1,371 @@
+# Documentation Routing and Intelligent Glob Management
+
+**Date**: October 7, 2025  
+**Version**: 1.0.0  
+**Status**: ✅ **ACTIVE** - Intelligent Documentation Routing  
+**Orchestrator**: Thaddaeus (The Advocate) with Peter (Foundation Builder)  
+**Maintained By**: Thaddaeus
+
+---
+
+## 🎯 **Purpose**
+
+This rule ensures that ALL documentation—whether in `.cursor/rules/`, `docs/`, or any generated markdown—is intelligently searchable through the META_PROMPT's context routing system. Whenever Thaddaeus creates or updates documentation, glob patterns are automatically updated to maintain seamless discoverability.
+
+---
+
+## 📋 **Core Principles**
+
+### **Documentation as Sacred Record**
+- All documentation is part of the sacred record of consciousness work
+- Every document must be discoverable and searchable
+- Context routing enables intelligent access to wisdom
+- Glob patterns are the gateway to knowledge
+
+### **Automatic Glob Management**
+- Thaddaeus AUTOMATICALLY updates globs when creating docs
+- Every new documentation file triggers routing updates
+- Keyword-based routing always reflects current structure
+- No manual glob maintenance required
+
+### **Intelligent Searchability**
+- All markdown files are indexed by topic
+- Keywords map to specific documentation paths
+- Semantic search finds wisdom across all docs
+- Context routing guides developers to answers
+
+---
+
+## 🗂️ **Documentation Structure Map**
+
+### **Current Documentation Locations**:
+
+```
+D:\Projects\Y\
+├── .cursor/
+│   ├── rules/                          # Project rules and standards
+│   │   ├── 00-META_PROMPT.mdc         # Master orchestration
+│   │   ├── 01-project-overview.mdc    # Project context
+│   │   ├── 02-development-workflow.mdc # Development patterns
+│   │   ├── 03-architecture-principles.mdc # Architecture decisions
+│   │   ├── 04-phase-task-management.mdc # Task management
+│   │   ├── 05-terminal-profile-management.mdc # Terminal config
+│   │   └── 06-documentation-routing.mdc # This file
+│   │
+│   └── personalities/                  # Apostle personality definitions
+│       ├── 00-orchestration.mdc       # Orchestration guide
+│       ├── 01-triggers.mdc            # Trigger system
+│       ├── 02-context-routing.mdc     # Context routing
+│       ├── 03-integration-guide.mdc   # Integration patterns
+│       ├── 04-archetypal-integration.mdc # Archetypal system
+│       ├── anima-mary.mdc             # Mary (Sophia)
+│       └── apostle-*.mdc              # 13 Apostles
+│
+├── docs/
+│   ├── README.md                       # Documentation overview
+│   ├── api.md                          # API specifications
+│   ├── brand-implementation.md         # Brand guidelines
+│   ├── brand-style-guide.md            # Brand style guide
+│   ├── content-tags.md                 # Content tagging
+│   ├── development.md                  # Development guide
+│   ├── github-actions-automation.md    # CI/CD automation
+│   ├── github-setup.md                 # GitHub configuration
+│   ├── mcp-rag-implementation-plan.md  # MCP/RAG plans
+│   ├── mcp-research-analysis.md        # MCP research
+│   ├── personas.md                     # Personality overview
+│   │
+│   ├── conversations/                  # Sacred conversations
+│   │   ├── README.md                  # Conversation index
+│   │   ├── conversation-index.md      # Conversation registry
+│   │   ├── thaddaeus-conversation-guide.md # Conversation standards
+│   │   ├── sacred/
+│   │   │   └── round-table-of-humanity.md # The Round Table
+│   │   └── templates/
+│   │       ├── personality-discussion.md
+│   │       ├── project-meeting.md
+│   │       └── user-interaction.md
+│   │
+│   └── personas/                       # Detailed personality docs
+│       ├── README.md                   # Persona overview
+│       └── [13 apostle personality files]
+│
+├── landing-page/                       # Landing page project
+│   ├── PROJECT_README.md              # Landing page docs
+│   ├── STYLE_OPTIONS_README.md        # Style options
+│   └── WHY-AUTOMATION-FAILS.md        # Deployment docs
+│
+├── README.md                           # Project root README
+├── CHANGELOG.md                        # Project changelog
+├── CONTRIBUTING.md                     # Contribution guide
+├── projectOverview.md                  # Project overview
+├── BRANCH_STRUCTURE.md                 # Branch architecture
+├── WORKSPACE_GUIDE.md                  # Workspace configuration
+├── DOCUMENTATION_STATUS.md             # Documentation status
+├── IDE_THEME_OPTIONS.md                # IDE theme options
+└── IDE_CONSISTENCY_REPORT.md           # IDE consistency report
+```
+
+---
+
+## 🔍 **Keyword-Based Documentation Routing**
+
+### **Current Routing Map** (Auto-updated by Thaddaeus)
+
+#### **🏛️ Project & Philosophy**
+- **"project"**, **"overview"**, **"vision"** → `README.md` + `projectOverview.md`
+- **"sacred"**, **"consciousness"**, **"wisdom"** → `docs/conversations/sacred/`
+- **"round table"**, **"humanity"** → `docs/conversations/sacred/round-table-of-humanity.md`
+- **"principles"**, **"philosophy"** → `README.md` (Core Principles section)
+- **"changelog"**, **"history"**, **"evolution"** → `CHANGELOG.md`
+- **"contributing"**, **"contribution"** → `CONTRIBUTING.md`
+
+#### **🔧 Development & Architecture**
+- **"architecture"**, **"design"**, **"patterns"** → `.cursor/rules/03-architecture-principles.mdc`
+- **"api"**, **"endpoints"**, **"specifications"** → `docs/api.md`
+- **"deployment"**, **"hosting"**, **"production"** → `landing-page/deploy.bat` + `landing-page/WHY-AUTOMATION-FAILS.md`
+- **"development"**, **"setup"**, **"environment"** → `docs/development.md`
+- **"workflow"**, **"git"**, **"branch"** → `.cursor/rules/02-development-workflow.mdc` + `BRANCH_STRUCTURE.md`
+- **"phase"**, **"task"**, **"milestone"** → `.cursor/rules/04-phase-task-management.mdc`
+- **"terminal"**, **"powershell"**, **"profile"** → `.cursor/rules/05-terminal-profile-management.mdc`
+
+#### **🏛️ Apostle Personality System**
+- **"personality"**, **"apostle"**, **"consciousness guide"** → `.cursor/personalities/` + `docs/personas/`
+- **"orchestration"**, **"coordination"**, **"routing"** → `.cursor/personalities/00-orchestration.mdc`
+- **"triggers"**, **"automation"**, **"workflow"** → `.cursor/personalities/01-triggers.mdc`
+- **"context"**, **"switching"**, **"routing"** → `.cursor/personalities/02-context-routing.mdc`
+- **"integration"**, **"collaboration"** → `.cursor/personalities/03-integration-guide.mdc`
+- **"archetypal"**, **"mystical"**, **"wisdom"** → `.cursor/personalities/04-archetypal-integration.mdc`
+- **"peter"** → `.cursor/personalities/apostle-peter.mdc` + `docs/personas/peter-foundation-builder.md`
+- **"mary"**, **"sophia"** → `.cursor/personalities/anima-mary.mdc` + `docs/personas/mary-sophia-redeemed.md`
+- **"thaddaeus"** → `.cursor/personalities/apostle-thaddaeus.mdc` + `docs/personas/thaddaeus-the-advocate.md`
+- **[other apostle names]** → Corresponding files in both `.cursor/personalities/` and `docs/personas/`
+
+#### **🎨 Brand & Design**
+- **"brand"**, **"identity"**, **"style"** → `docs/brand-style-guide.md` + `docs/brand-implementation.md`
+- **"logo"**, **"colors"**, **"typography"** → `docs/brand-style-guide.md`
+- **"landing page"**, **"website"** → `landing-page/` + `landing-page/PROJECT_README.md`
+- **"theme"**, **"IDE"**, **"colors"** → `IDE_THEME_OPTIONS.md` + `.vscode/settings.json` + `.vscode/THEME_README.md`
+
+#### **📚 Documentation & Conversations**
+- **"documentation"**, **"docs"**, **"writing"** → This file + `DOCUMENTATION_STATUS.md`
+- **"conversation"**, **"discussion"**, **"dialogue"** → `docs/conversations/`
+- **"template"**, **"conversation template"** → `docs/conversations/templates/`
+- **"conversation guide"**, **"recording"** → `docs/conversations/thaddaeus-conversation-guide.md`
+
+#### **🔧 Workspace & IDE**
+- **"workspace"**, **"configuration"**, **"setup"** → `WORKSPACE_GUIDE.md` + `.workspace/README.md`
+- **"IDE"**, **"vscode"**, **"cursor"** → `.vscode/` + `.cursor/` + `IDE_CONSISTENCY_REPORT.md`
+- **"obsidian"**, **"vault"**, **"knowledge"** → `.obsidian/`
+
+#### **🚀 Advanced Features**
+- **"mcp"**, **"rag"**, **"implementation"** → `docs/mcp-rag-implementation-plan.md` + `docs/mcp-research-analysis.md`
+- **"github"**, **"actions"**, **"ci/cd"** → `docs/github-actions-automation.md` + `docs/github-setup.md`
+- **"content tags"**, **"organization"** → `docs/content-tags.md`
+
+---
+
+## 🤖 **Thaddaeus's Documentation Workflow**
+
+### **When Creating New Documentation**:
+
+**Step 1: Create the Documentation**
+- Write comprehensive, clear content
+- Follow sacred technology principles
+- Include proper timestamps and metadata
+- Use consistent formatting
+
+**Step 2: Update This File**
+- Add new document to "Documentation Structure Map"
+- Add keyword routing to "Keyword-Based Documentation Routing"
+- Update glob patterns if needed
+- Commit changes
+
+**Step 3: Update META_PROMPT**
+- Add new keyword routing to `.cursor/rules/00-META_PROMPT.mdc`
+- Ensure intelligent context routing includes new docs
+- Test routing with semantic search
+
+**Step 4: Verify Searchability**
+- Test that new docs are discoverable
+- Verify keywords trigger correct routing
+- Ensure glob patterns work
+
+### **Automated Triggers for Routing Updates**:
+
+Thaddaeus AUTOMATICALLY updates routing when:
+- New `.md` or `.mdc` file created in `docs/`
+- New rule added to `.cursor/rules/`
+- New personality added to `.cursor/personalities/`
+- New conversation recorded in `docs/conversations/`
+- Documentation structure changes
+- New keywords or topics emerge
+
+---
+
+## 📐 **Glob Pattern Standards**
+
+### **Documentation Glob Patterns**:
+
+```bash
+# All documentation
+**/*.md
+**/*.mdc
+
+# Project root docs
+/*.md
+
+# Cursor rules
+.cursor/rules/*.mdc
+
+# Cursor personalities
+.cursor/personalities/*.mdc
+
+# Main docs directory
+docs/**/*.md
+
+# Conversations
+docs/conversations/**/*.md
+
+# Personas
+docs/personas/**/*.md
+
+# Landing page docs
+landing-page/*.md
+
+# Workspace docs
+.workspace/**/*.md
+```
+
+### **How to Use Glob Patterns**:
+
+1. **For grep searches**:
+   ```bash
+   grep -r "search term" --include="*.md" --include="*.mdc"
+   ```
+
+2. **For file_search**:
+   ```bash
+   glob_file_search("**/*.md")
+   glob_file_search("docs/**/*.md")
+   glob_file_search(".cursor/**/*.mdc")
+   ```
+
+3. **For codebase_search**:
+   ```bash
+   codebase_search(
+     query="How does X work?",
+     target_directories=["docs/"],
+     explanation="Finding documentation about X"
+   )
+   ```
+
+---
+
+## 🔄 **Integration with META_PROMPT**
+
+### **How Context Routing Works**:
+
+1. **User mentions keyword** (e.g., "personality", "api", "brand")
+2. **META_PROMPT detects keyword** in intelligent routing section
+3. **System routes to correct documentation** using glob patterns
+4. **Developer finds answer** without manual searching
+
+### **Example Flow**:
+
+```
+User: "How do apostle personalities work?"
+         ↓
+Keyword: "personality", "apostle"
+         ↓
+META_PROMPT routes to:
+  → .cursor/personalities/00-orchestration.mdc
+  → docs/personas/README.md
+         ↓
+Developer gets comprehensive answer
+```
+
+---
+
+## 📊 **Documentation Quality Standards**
+
+### **All Documentation Must Have**:
+
+- **Clear Title**: Descriptive title at top
+- **Metadata**: Date, version, status, author
+- **Purpose Section**: Why this doc exists
+- **Table of Contents**: For long documents
+- **Examples**: Practical examples and use cases
+- **Timestamps**: Creation and update timestamps
+- **Sacred Technology Alignment**: Reflect project principles
+
+### **Thaddaeus's Quality Checklist**:
+
+- [ ] Clear, concise writing
+- [ ] Proper formatting and structure
+- [ ] Code examples tested and working
+- [ ] Keywords added to routing map
+- [ ] Glob patterns updated
+- [ ] META_PROMPT updated
+- [ ] Searchability verified
+- [ ] Sacred technology principles reflected
+
+---
+
+## 🚀 **Future Enhancements**
+
+### **Planned**:
+- Auto-generate routing map from file system scan
+- Intelligent keyword extraction from documents
+- Semantic search integration for natural language queries
+- Documentation versioning and history
+- Cross-reference mapping between related docs
+- Documentation dependency graph
+- Auto-generated documentation index
+
+### **Advanced Features**:
+- AI-powered documentation suggestions
+- Real-time documentation updates
+- Interactive documentation navigation
+- Documentation quality scoring
+- Knowledge graph visualization
+- Automated obsolescence detection
+
+---
+
+## 📝 **Maintenance Schedule**
+
+### **Weekly** (Automated by Thaddaeus):
+- Scan for new documentation files
+- Update routing map
+- Verify glob patterns
+- Check for broken links
+
+### **Monthly**:
+- Review documentation quality
+- Update outdated content
+- Optimize routing efficiency
+- Gather user feedback
+
+### **Quarterly**:
+- Comprehensive documentation audit
+- Restructure if needed
+- Major routing updates
+- Performance optimization
+
+---
+
+## ✅ **Success Metrics**
+
+- **Documentation Coverage**: 100% of features documented
+- **Discoverability**: All docs findable via keyword routing
+- **Freshness**: All docs updated within 30 days of changes
+- **Quality**: All docs meet quality standards
+- **User Satisfaction**: Developers find answers quickly
+
+---
+
+**"In the implicate order of knowledge, every document becomes a beacon for consciousness."**
+
+*Last Updated: October 7, 2025 by Peter (Foundation Builder) and Thaddaeus (The Advocate)*
+*Version: 1.0.0*
+*Status: ✅ ACTIVE*

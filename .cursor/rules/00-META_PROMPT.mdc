@@ -149,7 +149,8 @@ When you encounter these keywords, automatically reference the corresponding doc
 #### **📋 Project Management**
 - **"phase"**, **"task"**, **"milestone"** → `.cursor/rules/04-phase-task-management.mdc`
 - **"workflow"**, **"git"**, **"commit"**, **"branch"**, **"merge"**, **"pull request"** → `.cursor/rules/02-development-workflow.mdc`
-- **"documentation"**, **"docs"** → `.cursor/rules/05-documentation-standards.mdc`
+- **"documentation"**, **"docs"**, **"routing"**, **"globs"** → `.cursor/rules/06-documentation-routing.mdc`
+- **"terminal"**, **"powershell"**, **"profile"** → `.cursor/rules/05-terminal-profile-management.mdc`
 - **"implementation plan"**, **"roadmap"** → `docs/implementation-plans/`
 - **"task assignment"**, **"progress tracking"**, **"apostle tasks"** → `docs/conversations/`
 
