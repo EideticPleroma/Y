@@ -148,7 +148,7 @@ export default function Home() {
                   color: colors.secondary,
                   letterSpacing: '0.05em'
                 }}>
-                  Welcome home
+                  Welcome Home
                 </p>
               </div>
             ) : (
