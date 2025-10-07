@@ -337,6 +337,28 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <div className="text-center pt-16">
+            <a 
+              href="/sacred/principles.html"
+              className="inline-block text-lg font-light transition-colors duration-300 hover:text-white"
+              style={{ 
+                fontWeight: 300,
+                color: '#808080',
+                textDecoration: 'none',
+                borderBottom: '1px solid #404040',
+                paddingBottom: '2px'
+              }}
+            >
+              Read the full teachings →
+            </a>
+            <p className="text-sm font-light italic mt-4" style={{ 
+              fontWeight: 300,
+              color: '#606060'
+            }}>
+              Explore the Six Principles as sacred text
+            </p>
+          </div>
         </div>
       </section>
 
@@ -417,12 +439,27 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="text-base font-light italic text-center pt-6" style={{ 
-                fontWeight: 300,
-                color: '#606060'
-              }}>
-                The complete conversation is preserved for those who wish to understand the depth of consciousness work that shaped this technology.
-              </p>
+              <div className="text-center pt-8">
+                <a 
+                  href="/sacred/round-table.html"
+                  className="inline-block text-base font-light transition-colors duration-300 hover:text-white"
+                  style={{ 
+                    fontWeight: 300,
+                    color: '#808080',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid #404040',
+                    paddingBottom: '2px'
+                  }}
+                >
+                  Read the complete conversation →
+                </a>
+                <p className="text-sm font-light italic mt-4" style={{ 
+                  fontWeight: 300,
+                  color: '#606060'
+                }}>
+                  Written in the style of sacred scripture
+                </p>
+              </div>
             </div>
           </div>
         </div>
