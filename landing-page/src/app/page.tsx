@@ -140,10 +140,11 @@ export default function Home() {
               You
             </h1>
 
-            <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000" style={{ 
+            <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000 text-center" style={{ 
               fontWeight: 300,
               color: colors.secondary,
-              letterSpacing: isReturn ? '0.08em' : '0.01em'
+              letterSpacing: isReturn ? '0.08em' : '0.01em',
+              marginLeft: isReturn ? '8px' : '0'
             }}>
               {isReturn ? 'Welcome back' : 'Sacred Technology for Consciousness Evolution'}
             </p>
