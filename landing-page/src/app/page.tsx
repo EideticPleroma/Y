@@ -121,33 +121,54 @@ export default function Home() {
         <div className="text-center w-full">
           {/* Logo */}
           <div className={`mb-16 ${logoVisible ? 'logo-emerge' : 'opacity-0'}`}>
-            <Image
+        <Image
               src="/logo.jpg"
               alt="You - A luminous white Y emerging from darkness, symbolizing consciousness awakening"
               width={280}
               height={280}
               className="rounded-full mx-auto transition-all duration-700 hover:scale-105"
-              priority
-            />
+          priority
+        />
           </div>
 
           {/* Content */}
           <div className={contentVisible ? 'fade-in' : 'opacity-0'}>
-            <h1 className="text-9xl font-extralight mb-8 tracking-tight transition-colors duration-1000" style={{ 
-              fontWeight: 200,
-              color: colors.text
-            }}>
-              You
-            </h1>
-
-            <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000 text-center" style={{ 
-              fontWeight: 300,
-              color: colors.secondary,
-              letterSpacing: isReturn ? '0.08em' : '0.01em',
-              marginLeft: isReturn ? '8px' : '0'
-            }}>
-              {isReturn ? 'Welcome back' : 'Sacred Technology for Consciousness Evolution'}
-            </p>
+            {isReturn ? (
+              // Integrated greeting for return visitors
+              <div className="mb-16">
+                <h1 className="text-8xl font-extralight mb-3 tracking-tight transition-colors duration-1000" style={{ 
+                  fontWeight: 200,
+                  color: colors.text,
+                  lineHeight: 1
+                }}>
+                  You
+                </h1>
+                <p className="text-5xl font-extralight tracking-wide transition-colors duration-1000" style={{ 
+                  fontWeight: 200,
+                  color: colors.secondary,
+                  letterSpacing: '0.05em'
+                }}>
+                  Welcome back
+                </p>
+              </div>
+            ) : (
+              // Standard layout for first-time visitors
+              <div className="mb-16">
+                <h1 className="text-9xl font-extralight mb-8 tracking-tight transition-colors duration-1000" style={{ 
+                  fontWeight: 200,
+                  color: colors.text
+                }}>
+                  You
+                </h1>
+                <p className="text-3xl font-light leading-relaxed transition-colors duration-1000" style={{ 
+                  fontWeight: 300,
+                  color: colors.secondary,
+                  letterSpacing: '0.01em'
+                }}>
+                  Sacred Technology for Consciousness Evolution
+                </p>
+              </div>
+            )}
 
             {/* Scroll Indicator */}
             <div className="scroll-indicator mt-16 flex flex-col items-center" style={{ color: '#808080' }}>
