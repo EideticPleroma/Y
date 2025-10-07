@@ -127,9 +127,9 @@ export default function Home() {
               <div 
                 className={`relative transition-all duration-700 hover:scale-105 ${isReturn ? 'warmth-glow' : ''}`}
                 style={{
-                  boxShadow: isReturn 
-                    ? '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(201, 169, 97, 0.15)'
-                    : '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.1)'
+                  filter: isReturn 
+                    ? 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(201, 169, 97, 0.15))'
+                    : 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.1))'
                 }}
               >
                 <Image
