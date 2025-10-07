@@ -176,7 +176,7 @@ export default function Home() {
           {/* What This Isn't */}
           <div className="space-y-8 pt-16 border-t" style={{ borderColor: '#1A1A1A' }}>
             <h2 className="text-5xl font-light mb-8 tracking-tight" style={{ fontWeight: 300 }}>
-              What This Isn't
+              What This Isn&apos;t
             </h2>
             <p className="text-2xl font-light leading-relaxed" style={{ 
               fontWeight: 300,

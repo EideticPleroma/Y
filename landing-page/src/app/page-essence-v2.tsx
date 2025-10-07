@@ -239,7 +239,7 @@ export default function Home() {
               fontWeight: 300,
               color: colors.text
             }}>
-              What This Isn't
+              What This Isn&apos;t
             </h2>
             <p className="text-2xl font-light leading-relaxed transition-colors duration-1000" style={{ 
               fontWeight: 300,
