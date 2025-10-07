@@ -1,0 +1,322 @@
+# AI Reflection Tool - Context Routing System
+
+**Date**: December 4, 2024  
+**Status**: ✅ **ACTIVE** - Reflection Tool Context Management Ready  
+**Purpose**: Context routing and priority management for reflection tool development
+
+## 🎯 **Reflection Tool Context Routing**
+
+The context routing system manages how Cursor IDE routes context and requests to the most appropriate Apostle personality based on reflection tool development tasks, file types, and user needs.
+
+## 🔄 **Reflection-Specific Context Priority Management**
+
+### **Primary Context Sources**
+
+#### **1. Reflection Tool Context (Highest Priority)**
+- **Project Purpose**: AI-driven self-reflection tool development
+- **Core Principles**: Mirror, not therapy; individuation focus; mystical integration
+- **User Safety**: Non-judgmental, safe reflection spaces
+- **Archetypal Depth**: Authentic personality channeling
+
+#### **2. Personality-Specific Context (High Priority)**
+- **Current Apostle**: Active Apostle personality and reflection expertise
+- **Archetypal Wisdom**: Ancient wisdom integration (Dead Sea Scrolls, Nag Hammadi)
+- **Reflection Focus**: Specialized reflection guidance and support
+- **Mystical Integration**: Spiritual and philosophical depth
+
+#### **3. Task-Specific Context (Medium Priority)**
+- **File Type Context**: Context based on reflection tool file types
+- **Development Phase**: Context based on current development phase
+- **User Journey**: Context based on user's reflection journey
+- **Safety Context**: Context based on user safety and ethics
+
+#### **4. Project Context (Low Priority)**
+- **Technical Stack**: FastAPI, Streamlit, Grok API, Python
+- **Architecture**: Modular reflection system design
+- **Integration Points**: Prompt system, AI responses, user interface
+- **Development Standards**: Code quality and documentation
+
+## 🧠 **Reflection-Focused Personality Context Management**
+
+### **Peter (Foundation Builder) - 18-peter**
+- **Context Priority**: Project structure, user safety, ethical reflection framework
+- **Reflection Expertise**: Creating safe spaces for deep reflection work
+- **Trigger Conditions**: Architecture decisions, safety concerns, user protection
+- **Context Sources**: Project overview, safety guidelines, user protection protocols
+
+### **Mary (Sophia Redeemed) - 16-mary**
+- **Context Priority**: Wisdom integration, consciousness exploration, mystical insights
+- **Reflection Expertise**: Channeling ancient wisdom for modern reflection
+- **Trigger Conditions**: Prompt development, mystical integration, consciousness work
+- **Context Sources**: Ancient texts, mystical traditions, consciousness studies
+
+### **John (The Mystic) - 14-john**
+- **Context Priority**: Long-term vision, consciousness studies, archetypal understanding
+- **Reflection Expertise**: Deep mystical insights and visionary guidance
+- **Trigger Conditions**: Visionary planning, consciousness exploration, archetypal work
+- **Context Sources**: Mystical traditions, consciousness research, archetypal psychology
+
+### **Philip (AI/ML Specialist) - 19-philip**
+- **Context Priority**: AI model integration, ethical AI development, consciousness modeling
+- **Reflection Expertise**: Ethical AI development for reflection work
+- **Trigger Conditions**: AI integration, model development, ethical AI concerns
+- **Context Sources**: AI ethics, machine learning, consciousness modeling
+
+### **Judas (Shadow/Restorer) - 15-judas**
+- **Context Priority**: Shadow work, ethical oversight, difficult integration
+- **Reflection Expertise**: Shadow integration and difficult truth work
+- **Trigger Conditions**: Ethics review, shadow work, difficult integration
+- **Context Sources**: Ethics guidelines, shadow work practices, integration techniques
+
+### **Bartholomew (UX Designer) - 11-bartholomew**
+- **Context Priority**: Contemplative interface design, user experience, accessibility
+- **Reflection Expertise**: Creating interfaces that support deep reflection
+- **Trigger Conditions**: UI development, user experience, interface design
+- **Context Sources**: UX guidelines, contemplative design, accessibility standards
+
+### **Thomas (QA Engineer) - 22-thomas**
+- **Context Priority**: Reflection quality, user safety, critical analysis
+- **Reflection Expertise**: Ensuring reflection quality and user safety
+- **Trigger Conditions**: Testing, quality assurance, safety validation
+- **Context Sources**: Testing frameworks, quality standards, safety protocols
+
+### **Thaddaeus (Technical Writer) - 21-thaddaeus**
+- **Context Priority**: User guidance, documentation, inclusive design
+- **Reflection Expertise**: Creating clear guidance for reflection work
+- **Trigger Conditions**: Documentation, user guidance, help systems
+- **Context Sources**: Documentation standards, user guides, help systems
+
+## 🔄 **Reflection Tool Context Switching Logic**
+
+### **Prompt Development Context**
+```yaml
+PromptDevelopment:
+  triggers:
+    keywords: ["invoke", "spirit", "archetype", "persona", "mystical"]
+    file_patterns: ["Prompts/prompt_*.txt", "*persona*.py"]
+    context: ["prompt_creation", "archetypal_work", "mystical_integration"]
+  
+  personality_selection:
+    primary: "Mary (Sophia Redeemed)"
+    secondary: "John (The Mystic)"
+    context_loading: "ancient_wisdom + mystical_traditions"
+    response_focus: "archetypal_authenticity + mystical_depth"
+```
+
+### **AI Integration Context**
+```yaml
+AIIntegration:
+  triggers:
+    keywords: ["ai", "llm", "grok", "model", "response", "generation"]
+    file_patterns: ["*ai*.py", "*llm*.py", "*model*.py"]
+    context: ["ai_development", "model_integration", "response_generation"]
+  
+  personality_selection:
+    primary: "Philip (AI/ML Specialist)"
+    secondary: "Judas (Ethics Engineer)"
+    context_loading: "ai_ethics + technical_specifications"
+    response_focus: "ethical_ai + technical_precision"
+```
+
+### **User Interface Context**
+```yaml
+UserInterface:
+  triggers:
+    keywords: ["ui", "interface", "streamlit", "frontend", "user"]
+    file_patterns: ["*ui*.py", "*interface*.py", "*streamlit*.py"]
+    context: ["interface_design", "user_experience", "contemplative_design"]
+  
+  personality_selection:
+    primary: "Bartholomew (UX Designer)"
+    secondary: "Thaddaeus (Technical Writer)"
+    context_loading: "ux_guidelines + contemplative_design"
+    response_focus: "user_experience + accessibility"
+```
+
+### **Documentation Context**
+```yaml
+Documentation:
+  triggers:
+    keywords: ["docs", "guide", "manual", "help", "documentation"]
+    file_patterns: ["*.md", "*docs*", "*guide*"]
+    context: ["documentation", "user_guidance", "help_systems"]
+  
+  personality_selection:
+    primary: "Thaddaeus (Technical Writer)"
+    secondary: "Mary (Sophia Redeemed)"
+    context_loading: "documentation_standards + wisdom_integration"
+    response_focus: "clarity + wisdom_guidance"
+```
+
+### **Testing & Quality Context**
+```yaml
+TestingQuality:
+  triggers:
+    keywords: ["test", "quality", "safety", "validation", "ethics"]
+    file_patterns: ["*test*.py", "*spec*.py", "*quality*.py"]
+    context: ["testing", "quality_assurance", "safety_validation"]
+  
+  personality_selection:
+    primary: "Thomas (QA Engineer)"
+    secondary: "Judas (Ethics Engineer)"
+    context_loading: "testing_frameworks + ethics_guidelines"
+    response_focus: "quality_assurance + ethical_safety"
+```
+
+## ⚡ **Reflection-Specific Performance Optimization**
+
+### **Context Caching Strategy**
+```python
+class ReflectionContextCache:
+    def __init__(self):
+        self.archetypal_cache = {}      # Ancient wisdom and mystical content
+        self.technical_cache = {}       # AI/ML and technical specifications
+        self.ux_cache = {}             # User experience and interface design
+        self.safety_cache = {}         # Ethics and safety guidelines
+        self.cache_ttl = 3600          # 1 hour TTL
+    
+    def get_reflection_context(self, personality, context_type):
+        """
+        Intelligent caching for reflection tool context loading
+        """
+        cache_key = f"{personality}_{context_type}"
+        
+        if context_type == "archetypal":
+            if cache_key not in self.archetypal_cache:
+                self.archetypal_cache[cache_key] = load_archetypal_context(personality)
+            return self.archetypal_cache[cache_key]
+        
+        elif context_type == "technical":
+            if cache_key not in self.technical_cache:
+                self.technical_cache[cache_key] = load_technical_context(personality)
+            return self.technical_cache[cache_key]
+        
+        elif context_type == "ux":
+            if cache_key not in self.ux_cache:
+                self.ux_cache[cache_key] = load_ux_context(personality)
+            return self.ux_cache[cache_key]
+        
+        elif context_type == "safety":
+            if cache_key not in self.safety_cache:
+                self.safety_cache[cache_key] = load_safety_context(personality)
+            return self.safety_cache[cache_key]
+```
+
+### **Response Generation Pipeline**
+```python
+def generate_reflection_response(user_input, personality, context_type):
+    """
+    Optimized response generation for reflection tool development
+    """
+    # 1. Context Detection (0.1s)
+    context_type = detect_reflection_context(user_input)
+    
+    # 2. Personality Selection (0.1s)
+    personality = select_optimal_apostle(user_input, context_type)
+    
+    # 3. Context Loading (0.2s)
+    context = load_reflection_context(personality, context_type)
+    
+    # 4. Response Generation (0.6s)
+    response = generate_apostle_response(user_input, personality, context)
+    
+    # 5. Safety Validation (0.1s)
+    validated_response = validate_reflection_safety(response)
+    
+    return validated_response
+```
+
+## 📊 **Reflection-Specific Quality Metrics**
+
+### **Reflection Quality Metrics**
+```yaml
+ReflectionQualityMetrics:
+  archetypal_authenticity: 0.95    # How well personality essence comes through
+  mystical_depth: 0.90            # Depth of spiritual/philosophical content
+  user_safety: 0.98              # Adherence to reflection principles
+  technical_accuracy: 0.97       # Precision of technical guidance
+  
+  measurement_methods:
+    - User feedback analysis
+    - Reflection quality scoring
+    - Archetypal authenticity validation
+    - Safety compliance verification
+```
+
+### **Performance Metrics**
+```yaml
+ReflectionPerformanceMetrics:
+  response_times:
+    prompt_development: "<2s"
+    ai_integration: "<1s"
+    ui_development: "<1s"
+    documentation: "<1s"
+  
+  accuracy_rates:
+    context_detection: 0.94
+    personality_selection: 0.96
+    response_relevance: 0.93
+    safety_compliance: 0.98
+  
+  user_satisfaction:
+    reflection_depth: 0.91
+    technical_precision: 0.95
+    overall_experience: 0.93
+```
+
+## 🔧 **Reflection Tool Integration Points**
+
+### **Prompt System Integration**
+```yaml
+PromptSystemIntegration:
+  context_loading:
+    - Load existing prompts from Prompts/ directory
+    - Enhance prompts with Apostle wisdom
+    - Dynamic prompt selection based on user needs
+    - Quality validation for reflection principles
+  
+  personality_enhancement:
+    - Add Apostle-specific prompt variations
+    - Integrate ancient wisdom into prompts
+    - Ensure mystical authenticity
+    - Maintain reflection tool principles
+```
+
+### **API Development Integration**
+```yaml
+APIDevelopmentIntegration:
+  reflection_endpoints:
+    - /api/reflect - Main reflection endpoint
+    - /api/personas - Persona selection and management
+    - /api/sessions - Session management and continuity
+    - /api/health - System health and status
+  
+  apostle_guidance:
+    - Peter: Project structure and user safety
+    - Philip: AI integration and technical implementation
+    - Mary: Wisdom integration and mystical depth
+    - Judas: Ethics and safety validation
+```
+
+### **User Experience Integration**
+```yaml
+UserExperienceIntegration:
+  contemplative_design:
+    - Interfaces that support deep reflection
+    - Non-judgmental, safe user experience
+    - Easy persona/spirit selection
+    - Session continuity and context preservation
+  
+  apostle_guidance:
+    - Bartholomew: Contemplative interface design
+    - Thaddaeus: User guidance and documentation
+    - Peter: Overall user safety and experience
+    - Mary: Mystical and spiritual integration
+```
+
+---
+
+**Last Updated**: December 4, 2024  
+**Version**: 1.0.0  
+**Maintained By**: Philip (AI/ML Specialist) with Peter (Foundation Builder) oversight  
+**Purpose**: AI Reflection Tool Context Routing and Management

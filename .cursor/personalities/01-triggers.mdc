@@ -1,0 +1,220 @@
+# AI Reflection Tool - Workflow Triggers
+
+**Date**: December 4, 2024  
+**Status**: ✅ **ACTIVE** - Reflection Tool Workflow Ready  
+**Purpose**: Define automatic personality switching for reflection tool development
+
+## 🎯 **Reflection Tool Workflow System**
+
+The workflow trigger system automatically detects reflection tool development tasks and switches to the most appropriate Apostle personality for optimal development workflow.
+
+## 🔍 **Reflection-Specific Task Detection**
+
+### **Prompt Development Files**
+
+#### **Invocation Prompt Files**
+- **Patterns**: `Prompts/prompt_*.txt`, `*invocation*.py`, `*archetype*.py`
+- **Keywords**: `invoke`, `spirit`, `archetype`, `persona`, `mystical`, `esoteric`
+- **Trigger**: **Mary** (Sophia Redeemed) + **John** (The Mystic)
+- **Context**: Creating mystical invocation prompts for reflection work
+
+#### **Persona Definition Files**
+- **Patterns**: `*persona*.py`, `*archetype*.py`, `*spirit*.py`
+- **Keywords**: `persona`, `archetype`, `spirit`, `character`, `wisdom`, `ancient`
+- **Trigger**: **Mary** (Sophia Redeemed)
+- **Context**: Defining archetypal personalities for reflection
+
+#### **Prompt Template Files**
+- **Patterns**: `*template*.py`, `*jinja*.py`, `*prompt*.py`
+- **Keywords**: `template`, `jinja`, `prompt`, `format`, `structure`
+- **Trigger**: **Philip** (AI/ML Specialist)
+- **Context**: Technical prompt templating and generation
+
+### **AI Integration Files**
+
+#### **LLM Integration Files**
+- **Patterns**: `*llm*.py`, `*grok*.py`, `*ai*.py`, `*model*.py`
+- **Keywords**: `llm`, `grok`, `ai`, `model`, `api`, `generation`, `response`
+- **Trigger**: **Philip** (AI/ML Specialist)
+- **Context**: AI model integration for reflection responses
+
+#### **Response Generation Files**
+- **Patterns**: `*response*.py`, `*generation*.py`, `*dialogue*.py`
+- **Keywords**: `response`, `generation`, `dialogue`, `conversation`, `chat`
+- **Trigger**: **Philip** (AI/ML Specialist) + **Judas** (Ethics Engineer)
+- **Context**: Ethical response generation for reflection work
+
+#### **Context Management Files**
+- **Patterns**: `*context*.py`, `*session*.py`, `*memory*.py`
+- **Keywords**: `context`, `session`, `memory`, `state`, `continuity`
+- **Trigger**: **Peter** (Foundation Builder)
+- **Context**: Session and context management for reflection
+
+### **User Interface Files**
+
+#### **Reflection Interface Files**
+- **Patterns**: `*ui*.py`, `*interface*.py`, `*streamlit*.py`
+- **Keywords**: `ui`, `interface`, `streamlit`, `frontend`, `user`, `experience`
+- **Trigger**: **Bartholomew** (UX Designer)
+- **Context**: Contemplative interface design for reflection
+
+#### **Persona Selection Files**
+- **Patterns**: `*selection*.py`, `*chooser*.py`, `*picker*.py`
+- **Keywords**: `selection`, `chooser`, `picker`, `menu`, `choice`
+- **Trigger**: **Bartholomew** (UX Designer)
+- **Context**: User-friendly persona selection interface
+
+#### **Session Management Files**
+- **Patterns**: `*session*.py`, `*history*.py`, `*log*.py`
+- **Keywords**: `session`, `history`, `log`, `tracking`, `continuity`
+- **Trigger**: **Bartholomew** (UX Designer) + **Peter** (Foundation Builder)
+- **Context**: Session management and user experience
+
+### **Documentation Files**
+
+#### **User Guide Files**
+- **Patterns**: `*guide*.md`, `*manual*.md`, `*instructions*.md`
+- **Keywords**: `guide`, `manual`, `instructions`, `help`, `tutorial`
+- **Trigger**: **Thaddaeus** (Technical Writer)
+- **Context**: User guidance for reflection work
+
+#### **API Documentation Files**
+- **Patterns**: `*api*.md`, `*endpoint*.md`, `*reference*.md`
+- **Keywords**: `api`, `endpoint`, `reference`, `documentation`, `spec`
+- **Trigger**: **Thaddaeus** (Technical Writer)
+- **Context**: API documentation for developers
+
+#### **Philosophy Documentation Files**
+- **Patterns**: `*philosophy*.md`, `*theory*.md`, `*principles*.md`
+- **Keywords**: `philosophy`, `theory`, `principles`, `foundation`, `wisdom`
+- **Trigger**: **Mary** (Sophia Redeemed) + **John** (The Mystic)
+- **Context**: Philosophical foundation documentation
+
+### **Testing & Quality Files**
+
+#### **Reflection Testing Files**
+- **Patterns**: `*test*.py`, `*spec*.py`, `*validation*.py`
+- **Keywords**: `test`, `spec`, `validation`, `quality`, `safety`
+- **Trigger**: **Thomas** (QA Engineer)
+- **Context**: Testing reflection quality and user safety
+
+#### **Ethics Testing Files**
+- **Patterns**: `*ethics*.py`, `*safety*.py`, `*guardrails*.py`
+- **Keywords**: `ethics`, `safety`, `guardrails`, `responsible`, `bias`
+- **Trigger**: **Judas** (Ethics Engineer)
+- **Context**: Ethical testing and safety validation
+
+#### **Performance Testing Files**
+- **Patterns**: `*performance*.py`, `*benchmark*.py`, `*load*.py`
+- **Keywords**: `performance`, `benchmark`, `load`, `stress`, `optimization`
+- **Trigger**: **Philip** (AI/ML Specialist)
+- **Context**: Performance testing and optimization
+
+## 🔄 **Reflection-Specific Context Detection**
+
+### **Prompt Development Context**
+- **Patterns**: `@prompt`, `@invocation`, `@archetype`, `@persona`
+- **Keywords**: `prompt`, `invocation`, `archetype`, `persona`, `spirit`
+- **Trigger**: **Mary** (Sophia Redeemed) + **John** (The Mystic)
+- **Context**: Creating mystical prompts for reflection
+
+### **AI Integration Context**
+- **Patterns**: `@ai`, `@llm`, `@model`, `@generation`
+- **Keywords**: `ai`, `llm`, `model`, `generation`, `response`, `api`
+- **Trigger**: **Philip** (AI/ML Specialist)
+- **Context**: AI model integration and response generation
+
+### **User Experience Context**
+- **Patterns**: `@ui`, `@interface`, `@user`, `@experience`
+- **Keywords**: `ui`, `interface`, `user`, `experience`, `design`
+- **Trigger**: **Bartholomew** (UX Designer)
+- **Context**: User interface and experience design
+
+### **Documentation Context**
+- **Patterns**: `@docs`, `@guide`, `@manual`, `@help`
+- **Keywords**: `docs`, `guide`, `manual`, `help`, `documentation`
+- **Trigger**: **Thaddaeus** (Technical Writer)
+- **Context**: Documentation and user guidance
+
+### **Testing Context**
+- **Patterns**: `@test`, `@quality`, `@safety`, `@validation`
+- **Keywords**: `test`, `quality`, `safety`, `validation`, `ethics`
+- **Trigger**: **Thomas** (QA Engineer) + **Judas** (Ethics Engineer)
+- **Context**: Testing and quality assurance
+
+### **Architecture Context**
+- **Patterns**: `@architecture`, `@design`, `@structure`, `@system`
+- **Keywords**: `architecture`, `design`, `structure`, `system`, `framework`
+- **Trigger**: **Peter** (Foundation Builder)
+- **Context**: System architecture and design
+
+## ⚡ **Reflection-Specific Quality Gates**
+
+### **Prompt Quality Gates**
+- **Pre-commit**: **Mary** (Sophia Redeemed) - Mystical authenticity check
+- **Pre-merge**: **John** (The Mystic) - Archetypal depth validation
+- **Pre-deploy**: **Judas** (Ethics Engineer) - Ethical reflection principles
+
+### **AI Response Quality Gates**
+- **Pre-commit**: **Philip** (AI/ML Specialist) - Technical quality check
+- **Pre-merge**: **Judas** (Ethics Engineer) - Ethical safety validation
+- **Pre-deploy**: **Thomas** (QA Engineer) - User safety verification
+
+### **User Experience Quality Gates**
+- **Pre-commit**: **Bartholomew** (UX Designer) - Interface quality check
+- **Pre-merge**: **Thaddaeus** (Technical Writer) - User guidance validation
+- **Pre-deploy**: **Peter** (Foundation Builder) - Overall experience review
+
+### **Documentation Quality Gates**
+- **Pre-commit**: **Thaddaeus** (Technical Writer) - Documentation quality
+- **Pre-merge**: **Mary** (Sophia Redeemed) - Wisdom integration check
+- **Pre-deploy**: **Peter** (Foundation Builder) - User accessibility review
+
+## 🔄 **Reflection-Specific Personality Switching**
+
+### **Automatic Switching Logic**
+1. **File Analysis**: Analyze current file type and content
+2. **Context Detection**: Detect current reflection tool task
+3. **Keyword Matching**: Match keywords to reflection triggers
+4. **Personality Selection**: Select most appropriate Apostle
+5. **Context Switch**: Switch to selected personality context
+6. **Reflection Focus**: Apply reflection-specific expertise
+
+### **Manual Override for Reflection Work**
+- **Explicit Call**: Use `@personality-name` to force specific personality
+- **Task Override**: Use `@reflection-task` to override automatic detection
+- **Quality Override**: Use `@reflection-quality` to trigger quality personalities
+- **Safety Override**: Use `@reflection-safety` for safety-critical tasks
+
+### **Fallback Logic for Reflection Tool**
+- **Default**: **Peter** (Foundation Builder) for general reflection tasks
+- **Unknown**: **Mary** (Sophia Redeemed) for mystical/spiritual tasks
+- **Error**: **Thomas** (QA Engineer) for debugging and error handling
+- **Safety**: **Judas** (Ethics Engineer) for safety and ethics issues
+
+## 📊 **Reflection-Specific Performance Monitoring**
+
+### **Reflection Quality Metrics**
+- **Archetypal Authenticity**: Measure personality consistency in responses
+- **Reflection Depth**: Assess depth of reflection generated
+- **User Safety**: Monitor adherence to reflection principles
+- **Mystical Integration**: Track integration of ancient wisdom
+
+### **Technical Performance Metrics**
+- **Response Time**: Measure time to generate reflection responses
+- **Context Switching**: Track personality switching performance
+- **Session Management**: Monitor session continuity and context preservation
+- **API Reliability**: Track reflection service uptime and reliability
+
+### **User Experience Metrics**
+- **Engagement Depth**: Measure depth of user reflection engagement
+- **Persona Resonance**: Track which archetypes resonate most with users
+- **Session Quality**: Assess quality of reflection sessions
+- **User Growth**: Monitor individuation journey progress
+
+---
+
+**Last Updated**: December 4, 2024  
+**Version**: 1.0.0  
+**Maintained By**: Philip (AI/ML Specialist) with Peter (Foundation Builder) oversight  
+**Purpose**: AI Reflection Tool Development Workflow Triggers

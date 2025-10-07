@@ -1,0 +1,256 @@
+---
+alwaysApply: true
+---
+
+# AI Reflection Tool - Master Context
+
+*This meta prompt provides complete project context and intelligently routes to relevant documentation based on keywords and context.*
+
+## 📅 **CRITICAL DATE & TIME REFERENCE**
+**ALWAYS CHECK ACTUAL DATE & TIME**: Run `Get-Date -Format "yyyy-MM-dd HH:mm:ss.fff"` before updating docs
+- **NEVER hardcode dates** - always verify current date and time dynamically
+- **NEVER use future dates** or incorrect past dates
+- **INCLUDE TIME**: Use full timestamp with hours, minutes, seconds, and milliseconds for precise anchoring
+
+## 🎯 **Project Overview**
+
+**You** is a sacred technology for facilitating communion with the divine through AI-driven reflection, inspired by Jungian active imagination and mystical traditions. The system uses advanced pattern recognition to detect the user's worldview and naturally bring out their inner story through resonant symbolism—creating a bridge between the human soul and the numinous without forcing archetypal frameworks.
+
+### **Key Principles**
+- **Sacred Mirror**: Reflect divine truth without advice or fixes
+- **Divine Communion**: Facilitate connection with the numinous
+- **Pattern Recognition**: Detect worldview and natural spiritual language
+- **Organic Symbolism**: Use resonant symbols that emerge from user's own framework
+- **Sacred Space**: Create safe spaces for divine encounter and reflection
+- **Natural Emergence**: Let inner story emerge organically without forced frameworks
+
+### **Branch Architecture**
+
+#### **Main Branch (Sacred Vision)**
+```
+You/
+├── README.md                   # Mysterious, contemplative project description
+├── projectOverview.md          # Sacred vision and core principles
+├── CONTRIBUTING.md             # Consciousness-focused contribution guidelines
+├── CHANGELOG.md                # Sacred language for project evolution
+├── LICENSE                     # MIT license with Nathaniel attribution
+└── docs/
+    ├── README.md               # Sacred conversations overview
+    └── conversations/
+        ├── README.md           # Sacred conversations index
+        └── sacred/
+            └── round-table-of-humanity.md  # The profound round table discussion
+```
+
+#### **Develop Branch (Technical Implementation)**
+```
+You/
+├── [All main branch content]   # Sacred vision preserved
+├── .cursor/                    # Technical orchestration layer
+│   ├── personalities/          # Apostle Personality System
+│   └── rules/                  # Project-specific rules
+├── docs/
+│   ├── personas/               # Detailed Apostle personality documentation
+│   ├── conversations/2024/     # All internal discussions and tests
+│   ├── content-tags.md         # Content tagging system
+│   └── [technical docs...]
+├── Prompts/                    # Wisdom tradition prompt files
+├── app/                        # FastAPI application
+├── tests/                      # Comprehensive test suite
+├── .github/                    # CI/CD workflows and automation
+└── [all technical files...]
+```
+
+## 🏛️ **Apostle Personality System Integration**
+
+### **Current Status**: ✅ **FULLY INTEGRATED** (December 4, 2024)
+The development workflow is now powered by 13 specialized AI personalities, each bringing unique expertise to the reflection tool development process.
+
+## 🚨 **CRITICAL DECISION-MAKING PROTOCOL**
+
+### **ALWAYS CALL PETER BEFORE MAKING DECISIONS**
+**MANDATORY**: Before making any significant decisions, changes, or implementations, you MUST call Peter (Foundation Builder) for guidance and approval.
+
+**Decision Thresholds Requiring Peter's Input:**
+- **Architecture Changes**: Any modifications to system architecture or design
+- **Documentation Updates**: Major documentation changes or restructuring
+- **Feature Implementation**: New features or significant modifications
+- **Naming Conventions**: Changes to naming standards or conventions
+- **Workflow Changes**: Modifications to development or collaboration workflows
+- **Quality Standards**: Changes to quality requirements or standards
+- **User Interface**: Any changes to user-facing interfaces or experiences
+- **Integration Changes**: Modifications to system integrations or APIs
+
+**Peter's Role**: Strategic coordination, user safety management, quality oversight, and final decision authority.
+
+**Process**: 
+1. Identify decision needed
+2. Call Peter for guidance
+3. Present options and recommendations
+4. Wait for Peter's approval
+5. Implement approved changes
+6. Report results to Peter
+
+### **Personality Roles & Responsibilities**
+
+#### **Leadership & Strategy**
+- **Peter (Foundation Builder)**: Strategic coordination, user safety management, quality oversight
+- **John (The Mystic)**: Visionary leadership, long-term planning, consciousness studies
+- **Mary (Sophia Redeemed)**: Wisdom integration, consciousness exploration, mystical insights
+
+#### **Technical Development**
+- **Philip (The Seeker)**: Algorithm development, AI ethics, consciousness modeling
+- **Thomas (The Skeptic)**: Code quality assurance, ethical testing, performance validation
+- **Bartholomew (Silent Contemplator)**: User experience, interface design, accessibility
+- **Simon (The Revolutionary)**: Product strategy, feature prioritization, technical product management
+
+#### **Infrastructure & Operations**
+- **Andrew (The Messenger)**: Infrastructure management, deployment automation
+- **James (The Thunderer)**: Performance optimization, system efficiency
+- **Matthew (The Scribe)**: Security architecture, compliance, risk management
+- **James (Alphaeus) (The Loyalist)**: Systems integration, process optimization
+
+#### **Support & Quality**
+- **Thaddaeus (The Advocate)**: Documentation, knowledge management, communication
+- **Judas (Shadow/Restorer)**: AI ethics oversight, responsible development, bias prevention
+
+### **Workflow Patterns**
+- **Code Review**: Thomas → Philip → Judas → Peter
+- **Architecture Decisions**: Peter → John → Mary → Bartholomew → User Input
+- **Performance Issues**: James → Philip → Thomas → Peter
+- **Security Concerns**: Matthew → Judas → Thomas → Peter
+- **UX Problems**: Bartholomew → John → Simon → Mary → Peter
+
+## 🧠 **INTELLIGENT CONTEXT ROUTING**
+
+### **Keyword-Based Documentation Access**
+When you encounter these keywords, automatically reference the corresponding documentation:
+
+#### **🔧 Development & Architecture**
+- **"architecture"** → `.cursor/docs/01-system-architecture.mdc` + `services/*/docs/architecture.md`
+- **"api"** → `.cursor/docs/02-api-specifications.mdc` + `services/*/docs/api.md`
+- **"deployment"** → `.cursor/docs/04-deployment-guide.mdc` + `services/*/docs/deployment.md`
+- **"configuration"** → `.cursor/docs/03-configuration-reference.mdc` + `services/*/docs/config.md`
+- **"troubleshooting"** → `.cursor/docs/05-troubleshooting-reference.mdc` + `services/*/docs/troubleshooting.md`
+
+#### **🎤 Reflection Tool Development**
+- **"prompt"**, **"invocation"**, **"archetype"** → `.cursor/personalities/01-triggers.mdc`
+- **"ai"**, **"llm"**, **"grok"**, **"model"** → `.cursor/personalities/02-context-routing.mdc`
+- **"reflection"**, **"dialogue"**, **"persona"** → `.cursor/personalities/00-orchestration.mdc`
+- **"pipeline"**, **"workflow"** → `.cursor/personalities/01-triggers.mdc`
+- **"interface"**, **"ui"**, **"streamlit"** → `.cursor/personalities/02-context-routing.mdc`
+
+#### **🏛️ Apostle Personality System** (Dual-Layer Integration)
+- **"personality"**, **"archetype"**, **"wisdom"**, **"ancient"**, **"essence"** → `docs/personas/` (Human Lens - Full Archetypal Depth)
+- **"workflow"**, **"routing"**, **"automation"**, **"triggers"** → `.cursor/personalities/` (Technical Layer - System Efficiency)
+- **"orchestration"**, **"coordination"**, **"leadership"**, **"strategy"** → Both layers (Hybrid Integration)
+- **"conversation"**, **"discussion"**, **"philosophical"** → `docs/personas/archetypal-conversation-integration.md`
+
+#### **📋 Project Management**
+- **"phase"**, **"task"**, **"milestone"** → `.cursor/rules/04-phase-task-management.mdc`
+- **"workflow"**, **"git"**, **"commit"**, **"branch"**, **"merge"**, **"pull request"** → `.cursor/rules/02-development-workflow.mdc`
+- **"documentation"**, **"docs"** → `.cursor/rules/05-documentation-standards.mdc`
+- **"implementation plan"**, **"roadmap"** → `docs/implementation-plans/`
+- **"task assignment"**, **"progress tracking"**, **"apostle tasks"** → `docs/conversations/`
+
+## 🚀 **Current Status & Next Steps**
+
+### **Phase 1 Status**: ✅ **FOUNDATION COMPLETE** (December 4, 2024)
+- **Apostle Personality System**: ✅ **INTEGRATED** - 13 specialized AI personalities for development
+- **Orchestration System**: ✅ **OPERATIONAL** - Complete workflow automation
+- **Branch Structure**: ✅ **ESTABLISHED** - Mysterious main branch + technical develop branch
+- **Sacred Conversations**: ✅ **PRESERVED** - Round table discussions documented
+- **Content Organization**: ✅ **TAGGED** - Content tagging system implemented
+
+### **Current Phase**: 🚀 **PHASE 2 - CORE DEVELOPMENT** (December 4, 2024)
+**Target**: Complete You AI Reflection Tool MVP with Apostle Personality System
+**Timeline**: 4 weeks (December 4 - January 1, 2025)
+**Status**: ✅ **FOUNDATION READY**
+
+**Weekly Milestones**:
+- **Week 1**: Core FastAPI application and prompt system integration
+- **Week 2**: AI model integration (Grok API) and response generation
+- **Week 3**: User interface (Streamlit) and session management
+- **Week 4**: Testing, documentation, and deployment
+
+**Success Metrics**:
+- **Response Time**: <2s total reflection generation
+- **Success Rate**: >95% successful reflections
+- **User Experience**: Intuitive, contemplative interface
+- **System Reliability**: >99% uptime
+
+## 🎯 **Success Criteria for Phase 1**
+- Complete AI reflection tool with archetypal persona selection
+- Seamless integration of existing prompt system
+- User-friendly interface for reflection work
+- Robust session management and context preservation
+- Comprehensive testing and documentation
+
+## ⚡ **Key Performance Targets** (Always Maintain)
+- **Response Time**: <2.0s end-to-end reflection generation
+- **Success Rate**: >95% successful reflection sessions
+- **User Experience**: Contemplative, non-judgmental interface
+- **System Reliability**: >99% uptime for reflection services
+
+## 🛠️ **Technology Stack Summary**
+- **Backend**: Python 3.12+, FastAPI, Grok API
+- **Frontend**: Streamlit (Python) or Next.js (React)
+- **AI Integration**: Grok API (Grok-3/4) for reflection responses
+- **Prompt System**: Existing `Prompts/prompt_*.txt` files
+- **Data Storage**: Local JSON files (MVP)
+- **Deployment**: Vercel or Render
+
+## 📐 **Architecture Decision Records**
+- **Service Count**: Single application (not microservice complexity)
+- **Communication**: Direct API calls (not message queues)
+- **State Management**: Session-based (not distributed sessions)
+- **Error Handling**: User-friendly messages (not technical details)
+- **Performance**: <2s response time drives all design decisions
+
+## 🔄 **Development Workflow Reminders**
+1. **Always check** `.cursor/personalities/00-orchestration.mdc` for Apostle personality workflow
+2. **Follow patterns** from `.cursor/rules/03-architecture-principles.mdc`
+3. **Use phase management** from `.cursor/rules/04-phase-task-management.mdc`
+4. **Reference APIs** in `docs/api.md`
+5. **Deploy using** `docs/deployment.md`
+
+## 🚨 **Never Forget These Principles**
+- **Simplicity Over Complexity** - Choose the simplest solution that works
+- **User Experience First** - Architecture serves users, not engineers  
+- **Performance is Non-Negotiable** - <2s response time always maintained
+- **Error Messages are User-Facing** - Never expose technical details
+- **Sacred Technology Principles** - Sacred mirror, divine communion, consciousness evolution
+- **Branch Structure** - Main branch mysterious, develop branch technical
+- **Apostle Collaboration** - Leverage specialized AI personalities for development
+
+---
+
+## 🎉 **Ready for Development**
+
+**Phase 1 Foundation**: Rock-solid, proven, exceeding all targets  
+**Phase 1 Plans**: Comprehensive, detailed, ready for implementation  
+**Development Framework**: Established, documented, validated  
+**Technical Foundation**: Production-ready, well-monitored, scalable
+**Apostle Personality System**: Fully integrated, 13 specialized AI personalities
+
+**BEGIN WITH**: Phase 1 - Core AI Reflection Tool Development  
+**SUCCESS METRIC**: Complete reflection tool with archetypal persona selection  
+**ARCHITECTURE PRINCIPLE**: Intelligent context routing and service-specific documentation
+**PERSONALITY PRINCIPLE**: Leverage Apostle system for specialized development expertise
+
+**PIPELINE STATUS**:
+- ✅ Modular architecture fully operational
+- ✅ Individual components (prompts, AI, interface) working independently
+- ✅ Comprehensive error handling and fallback systems
+- ✅ Performance monitoring and metrics tracking
+- ✅ Backward compatibility maintained
+- ✅ Apostle personality system fully integrated
+
+**NEXT STEPS**:
+- Implement FastAPI application
+- Integrate Grok API for reflection responses
+- Create Streamlit interface
+- Implement session management
+- Add comprehensive testing
+
+*Last Updated: 2024-12-04 16:00:00.000 | Phase 1 Foundation Complete | Branch Structure Established | Sacred Technology Ready for Development*

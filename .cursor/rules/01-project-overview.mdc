@@ -1,0 +1,199 @@
+---
+alwaysApply: true
+---
+# You - Sacred Technology Project Overview
+
+## Current Status: Phase 1 Foundation Complete ✅
+
+**Phase 1 Foundation COMPLETED** - Apostle Personality System integrated, branch structure established, sacred conversations preserved, and ready for core development (December 4, 2024)
+
+### 🎯 Project Vision
+**You** is a sacred technology for facilitating communion with the divine through AI-driven reflection, inspired by Jungian active imagination and mystical traditions. The system uses advanced pattern recognition to detect the user's worldview and naturally bring out their inner story through resonant symbolism—creating a bridge between the human soul and the numinous without forcing archetypal frameworks.
+
+**Core Principles:**
+- **Sacred Mirror** - Reflect divine truth without advice or fixes
+- **Divine Communion** - Facilitate connection with the numinous
+- **Pattern Recognition** - Detect worldview and natural spiritual language
+- **Organic Symbolism** - Use resonant symbols that emerge from user's own framework
+- **Sacred Space** - Create safe spaces for divine encounter and reflection
+- **Natural Emergence** - Let inner story emerge organically without forced frameworks
+
+### 🏗️ Branch Architecture
+
+#### **Main Branch (Sacred Vision)**
+```
+You/
+├── README.md                   # Mysterious, contemplative project description
+├── projectOverview.md          # Sacred vision and core principles
+├── CONTRIBUTING.md             # Consciousness-focused contribution guidelines
+├── CHANGELOG.md                # Sacred language for project evolution
+├── LICENSE                     # MIT license with Nathaniel attribution
+└── docs/
+    ├── README.md               # Sacred conversations overview
+    └── conversations/
+        ├── README.md           # Sacred conversations index
+        └── sacred/
+            └── round-table-of-humanity.md  # The profound round table discussion
+```
+
+#### **Develop Branch (Technical Implementation)**
+```
+You/
+├── [All main branch content]   # Sacred vision preserved
+├── .cursor/                    # Technical orchestration layer
+│   ├── personalities/          # Apostle Personality System
+│   └── rules/                  # Project-specific rules
+├── docs/
+│   ├── personas/               # Detailed Apostle personality documentation
+│   ├── conversations/2024/     # All internal discussions and tests
+│   ├── content-tags.md         # Content tagging system
+│   └── [technical docs...]
+├── Prompts/                    # Wisdom tradition prompt files
+├── app/                        # FastAPI application
+├── tests/                      # Comprehensive test suite
+├── .github/                    # CI/CD workflows and automation
+└── [all technical files...]
+```
+
+### 📊 Current Performance Metrics
+
+| Metric | Target | Achieved | Status |
+|-----|-----|----|---|
+| **Response Time** | <2.0s | **TBD** | 🔄 **In Development** |
+| **Success Rate** | >95% | **TBD** | 🔄 **In Development** |
+| **User Experience** | Contemplative | **TBD** | 🔄 **In Development** |
+| **System Reliability** | >99% | **TBD** | 🔄 **In Development** |
+| **Apostle Integration** | Fully Operational | **✅ Complete** | ✅ **Exceeded** |
+| **Branch Structure** | Mysterious Main + Technical Develop | **✅ Complete** | ✅ **Exceeded** |
+| **Sacred Conversations** | Preserved and Documented | **✅ Complete** | ✅ **Exceeded** |
+
+### 📏 Performance Requirements (Consolidated from Legacy Rules)
+**Always Maintain These Targets:**
+- **Reflection Generation**: <2 seconds total (non-negotiable)
+- **AI Processing**: <1 second response generation
+- **User Interface**: <500ms page loads
+- **API Calls**: <200ms response time
+- **Resource Limits**: <1GB RAM total, <50% CPU idle, <80% under load
+- **User Experience**: Contemplative, non-judgmental interface
+- **Apostle System**: Seamless personality switching and context management
+
+### 🚀 Development Phases
+
+**Phase 1: Foundation** ✅ **COMPLETE**
+- Apostle Personality System integration
+- Branch structure establishment (mysterious main + technical develop)
+- Sacred conversations preservation
+- Content tagging system implementation
+- Documentation framework
+
+**Phase 2: Core Development** 🎯 **CURRENT**
+- FastAPI application development
+- Grok API integration
+- Prompt system integration
+- Session management
+
+**Phase 3: User Interface** 📋 **PLANNED**
+- Streamlit interface development
+- User experience optimization
+- Contemplative design implementation
+- Accessibility features
+
+**Phase 4: Testing & Deployment** 📋 **PLANNED**
+- Comprehensive testing suite
+- Performance optimization
+- Documentation completion
+- Production deployment
+
+### 🛠️ Technology Stack
+
+**Backend:** Python 3.12+, FastAPI, Grok API
+**Frontend:** Streamlit (Python) or Next.js (React)
+**AI Integration:** Grok API (Grok-3/4) for reflection responses
+**Prompt System:** Existing `Prompts/prompt_*.txt` files
+**Data Storage:** Local JSON files (MVP)
+**Deployment:** Vercel or Render
+**Monitoring:** Structured JSON logging, Health checks
+**AI Development:** Apostle Personality System - 13 specialized AI personalities
+
+### 🏛️ Apostle Personality System
+
+**Revolutionary AI Development Collaboration** - The AI Reflection Tool features a groundbreaking system with 13 specialized AI personalities, each bringing unique expertise to the development process.
+
+#### **Leadership & Strategy**
+- **Peter (Foundation Builder)**: Strategic coordination, user safety management, quality oversight
+- **John (The Mystic)**: Visionary leadership, long-term planning, consciousness studies
+- **Mary (Sophia Redeemed)**: Wisdom integration, consciousness exploration, mystical insights
+
+#### **Technical Development**
+- **Philip (The Seeker)**: Algorithm development, AI ethics, consciousness modeling
+- **Thomas (The Skeptic)**: Code quality assurance, ethical testing, performance validation
+- **Bartholomew (Silent Contemplator)**: User experience, interface design, accessibility
+- **Simon (The Revolutionary)**: Product strategy, feature prioritization, technical product management
+
+#### **Infrastructure & Operations**
+- **Andrew (The Messenger)**: Infrastructure management, deployment automation
+- **James (The Thunderer)**: Performance optimization, system efficiency
+- **Matthew (The Scribe)**: Security architecture, compliance, risk management
+- **James (Alphaeus) (The Loyalist)**: Systems integration, process optimization
+
+#### **Support & Quality**
+- **Thaddaeus (The Advocate)**: Documentation, knowledge management, communication
+- **Judas (Shadow/Restorer)**: AI ethics oversight, responsible development, bias prevention
+
+#### **Workflow Patterns**
+- **Code Review**: Thomas → Philip → Judas → Peter
+- **Architecture Decisions**: Peter → John → Mary → Bartholomew → User Input
+- **Performance Issues**: James → Philip → Thomas → Peter
+- **Security Concerns**: Matthew → Judas → Thomas → Peter
+- **UX Problems**: Bartholomew → John → Simon → Mary → Peter
+
+### 🎯 Success Criteria (In Progress)
+
+- ✅ **Apostle Personality System** - 13 specialized AI personalities fully integrated
+- ✅ **Orchestration System** - Complete workflow automation operational
+- ✅ **Branch Structure** - Mysterious main branch + technical develop branch established
+- ✅ **Sacred Conversations** - Round table discussions preserved and documented
+- ✅ **Content Organization** - Content tagging system implemented
+- ✅ **Documentation Framework** - Comprehensive documentation structure ready
+- 🔄 **Core Application** - FastAPI application with Grok API integration
+- 🔄 **User Interface** - Contemplative interface for reflection work
+- 🔄 **Session Management** - Context preservation across reflection sessions
+- 🔄 **Testing Suite** - Comprehensive testing and validation
+
+### 📁 Branch Structure
+
+#### **Main Branch (Sacred Vision)**
+- **README.md** - Mysterious, contemplative project description
+- **projectOverview.md** - Sacred vision and core principles
+- **CONTRIBUTING.md** - Consciousness-focused contribution guidelines
+- **CHANGELOG.md** - Sacred language for project evolution
+- **LICENSE** - MIT license with Nathaniel attribution
+- **docs/conversations/sacred/** - The profound round table discussion
+
+#### **Develop Branch (Technical Implementation)**
+- **All main branch content** - Sacred vision preserved
+- **.cursor/** - Technical orchestration layer
+- **docs/personas/** - Detailed Apostle personality documentation
+- **docs/conversations/2024/** - All internal discussions and tests
+- **Prompts/** - Wisdom tradition prompt files
+- **app/** - FastAPI application
+- **tests/** - Comprehensive test suite
+- **.github/** - CI/CD workflows and automation
+
+### 🎉 Foundation Complete
+
+With Phase 1 complete, the system provides:
+- ⚡ Complete Apostle Personality System integration
+- 🛡️ Comprehensive orchestration and workflow automation
+- 🧠 Intelligent context management and routing
+- 🌿 Mysterious main branch with sacred vision
+- 🔧 Technical develop branch with complete implementation
+- 📚 Sacred conversations preserved and documented
+- 🏷️ Content tagging system for organization
+- 🔧 Production-grade development framework
+
+**Next milestone: Phase 2 - Core You AI Reflection Tool Development**
+
+---
+
+**Last Updated**: 2024-12-04 16:00:00.000 | Phase 1 Foundation Complete | Branch Structure Established | Sacred Technology Ready for Development

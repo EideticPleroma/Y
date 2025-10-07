@@ -1,0 +1,357 @@
+---
+description: Architecture Decisions
+alwaysApply: false
+---
+# Architecture Principles and Technical Standards
+
+## 🏗️ Core Architecture Philosophy
+
+### Sacred Technology Architecture
+**Single Application, Not Microservices** - Appropriate complexity for sacred technology use case
+**Branch Structure** - Mysterious main branch + technical develop branch for sacred technology development
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    You AI Reflection Tool               │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │   Prompts   │  │     AI      │  │    User     │     │
+│  │   System    │  │ Integration │  │ Interface   │     │
+│  │             │  │             │  │             │     │
+│  │ • Bohm      │◄─┤ • Grok API  │◄─┤ • Streamlit │     │
+│  │ • Jung      │  │ • Response  │  │ • Persona   │     │
+│  │ • Sagan     │  │ • Ethics    │  │ • Session   │     │
+│  │ • Others    │  │ • Safety    │  │ • History   │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │   Session   │  │  Apostle    │  │   Brand     │     │
+│  │ Management  │  │  System     │  │   System    │     │
+│  │             │  │             │  │             │     │
+│  │ • Context   │  │ • Peter     │  │ • You Logo  │     │
+│  │ • History   │  │ • Mary      │  │ • Colors    │     │
+│  │ • Continuity│  │ • Philip    │  │ • Typography│     │
+│  │ • Safety    │  │ • Others    │  │ • Style     │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Core Principles
+- **Simplicity First**: Choose simple solutions over complex ones
+- **User Experience Priority**: Architecture serves consciousness, not engineering ego
+- **Performance-Driven Design**: All decisions support <2s response time target
+- **Safety First**: User safety and sacred technology principles are non-negotiable
+- **Sacred Technology**: Seamlessly blend ancient wisdom with modern AI
+- **Divine Communion**: Create safe, supportive spaces for divine encounter
+- **Branch Structure**: Main branch mysterious, develop branch technical
+
+### Reflection Tool Architecture Patterns
+
+#### **Prompt System Integration**
+```python
+# Good: Direct prompt loading with archetypal enhancement
+class PromptManager:
+    def __init__(self):
+        self.prompts = {}
+        self.load_prompts()
+    
+    def load_prompts(self):
+        for prompt_file in Path("Prompts").glob("prompt_*.txt"):
+            persona_name = prompt_file.stem.replace("prompt_", "")
+            with open(prompt_file, 'r', encoding='utf-8') as f:
+                self.prompts[persona_name] = f.read()
+    
+    def get_enhanced_prompt(self, persona_name: str, user_input: str) -> str:
+        base_prompt = self.prompts.get(persona_name, "")
+        # Enhance with Apostle wisdom if available
+        if persona_name in self.apostle_enhancements:
+            base_prompt += f"\n\n{self.apostle_enhancements[persona_name]}"
+        return base_prompt.format(user_input=user_input)
+
+# Bad: Complex microservice orchestration
+class PromptServiceClient:
+    async def get_prompt(self, persona: str):
+        # Unnecessary complexity for simple file loading
+        pass
+```
+
+#### **AI Integration Pattern**
+```python
+# Good: Direct Grok API integration with safety
+class ReflectionAI:
+    def __init__(self):
+        self.client = GrokClient(api_key=os.getenv("XAI_API_KEY"))
+        self.safety_filters = SafetyFilters()
+    
+    async def generate_reflection(self, prompt: str, user_input: str) -> str:
+        try:
+            # Apply safety filters
+            safe_input = self.safety_filters.filter(user_input)
+            
+            # Generate response
+            response = await self.client.chat.completions.create(
+                model="grok-beta",
+                messages=[
+                    {"role": "system", "content": prompt},
+                    {"role": "user", "content": safe_input}
+                ],
+                max_tokens=500,
+                temperature=0.7
+            )
+            
+            # Validate response safety
+            safe_response = self.safety_filters.validate(response.choices[0].message.content)
+            return safe_response
+            
+        except Exception as e:
+            return "I'm experiencing some difficulty right now. Please try again."
+```
+
+#### **Session Management Pattern**
+```python
+# Good: Simple session management with context preservation
+class SessionManager:
+    def __init__(self):
+        self.sessions = {}
+        self.max_sessions = 1000
+    
+    def create_session(self, user_id: str) -> str:
+        session_id = str(uuid.uuid4())
+        self.sessions[session_id] = {
+            "user_id": user_id,
+            "created_at": datetime.now(),
+            "conversations": [],
+            "current_persona": None,
+            "context": {}
+        }
+        return session_id
+    
+    def add_conversation(self, session_id: str, persona: str, user_input: str, response: str):
+        if session_id in self.sessions:
+            self.sessions[session_id]["conversations"].append({
+                "persona": persona,
+                "user_input": user_input,
+                "response": response,
+                "timestamp": datetime.now()
+            })
+```
+
+### Service Communication Patterns
+
+#### **Direct Function Calls (Preferred)**
+```python
+# Good: Direct function calls with error handling
+class ReflectionService:
+    def __init__(self):
+        self.prompt_manager = PromptManager()
+        self.ai_client = ReflectionAI()
+        self.session_manager = SessionManager()
+    
+    async def process_reflection(self, session_id: str, persona: str, user_input: str):
+        try:
+            # Get session context
+            session = self.session_manager.get_session(session_id)
+            
+            # Load persona prompt
+            prompt = self.prompt_manager.get_enhanced_prompt(persona, user_input)
+            
+            # Generate reflection
+            response = await self.ai_client.generate_reflection(prompt, user_input)
+            
+            # Save conversation
+            self.session_manager.add_conversation(session_id, persona, user_input, response)
+            
+            return {
+                "response": response,
+                "persona": persona,
+                "session_id": session_id,
+                "timestamp": datetime.now().isoformat()
+            }
+            
+        except Exception as e:
+            return {
+                "error": "I'm experiencing some difficulty right now. Please try again.",
+                "persona": persona,
+                "session_id": session_id
+            }
+```
+
+### Data Storage Patterns
+
+#### **Local JSON Files (MVP)**
+```python
+# Good: Simple local storage for MVP
+class LocalStorage:
+    def __init__(self, data_dir: str = "data"):
+        self.data_dir = Path(data_dir)
+        self.data_dir.mkdir(exist_ok=True)
+    
+    def save_session(self, session_id: str, session_data: dict):
+        file_path = self.data_dir / f"session_{session_id}.json"
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(session_data, f, indent=2, default=str)
+    
+    def load_session(self, session_id: str) -> dict:
+        file_path = self.data_dir / f"session_{session_id}.json"
+        if file_path.exists():
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return None
+```
+
+### User Interface Patterns
+
+#### **Streamlit Interface (Preferred)**
+```python
+# Good: Simple Streamlit interface
+import streamlit as st
+
+def main():
+    st.set_page_config(
+        page_title="You - AI Reflection Tool",
+        page_icon="🌿",
+        layout="wide"
+    )
+    
+    # Brand header
+    st.markdown("""
+    <div style="text-align: center; padding: 2rem 0;">
+        <h1 style="color: #2D5A27; font-family: 'Inter', sans-serif;">You</h1>
+        <p style="color: #6B6B6B; font-size: 1.2rem;">AI Reflection Tool</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Persona selection
+    persona = st.selectbox(
+        "Choose Your Guide",
+        options=["bohm", "jung", "sagan", "others"],
+        format_func=lambda x: x.title()
+    )
+    
+    # User input
+    user_input = st.text_area(
+        "Share your thoughts...",
+        height=100,
+        placeholder="What's on your mind?"
+    )
+    
+    # Generate reflection
+    if st.button("Reflect", type="primary"):
+        with st.spinner("Generating reflection..."):
+            response = process_reflection(session_id, persona, user_input)
+            st.markdown(f"**{persona.title()}**: {response['response']}")
+```
+
+### Performance Standards
+
+#### **Response Time Targets**
+- **Reflection Generation**: <2 seconds total
+- **AI Processing**: <1 second response generation
+- **User Interface**: <500ms page loads
+- **API Calls**: <200ms response time
+- **Session Management**: <100ms session operations
+
+#### **Resource Limits**
+- **Memory Usage**: <1GB RAM total
+- **CPU Usage**: <50% idle, <80% under load
+- **Storage**: <100MB for local data
+- **Network**: Minimal external dependencies
+
+### Security and Safety Standards
+
+#### **User Safety Protocols**
+- **Non-judgmental Responses**: Never provide advice or fixes
+- **Safety Filters**: Prevent harmful or judgmental responses
+- **Privacy Protection**: User data stays local
+- **Ethics Gates**: Built-in ethical review
+- **Reflection Principles**: Maintain mirror, not therapy approach
+
+#### **Data Protection**
+- **Local Storage**: User data stays on device
+- **No Tracking**: No user behavior tracking
+- **Session Privacy**: Sessions are private and secure
+- **Data Minimization**: Only store necessary data
+
+### Quality Assurance Standards
+
+#### **Code Quality**
+- **Clean Code**: Readable, maintainable, well-documented
+- **Testing**: Comprehensive test coverage
+- **Error Handling**: Graceful error handling
+- **Logging**: Structured logging for debugging
+- **Documentation**: Complete API documentation
+
+#### **User Experience Quality**
+- **Contemplative Design**: Interface supports deep reflection
+- **Accessibility**: Inclusive design for all users
+- **Performance**: Fast, responsive interface
+- **Reliability**: Consistent, dependable service
+- **Safety**: Safe, supportive environment
+
+### Monitoring and Observability
+
+#### **Health Checks**
+```python
+# Good: Simple health check endpoint
+@app.get("/health")
+async def health_check():
+    return {
+        "status": "healthy",
+        "timestamp": datetime.now().isoformat(),
+        "version": "1.0.0",
+        "services": {
+            "ai": "healthy",
+            "prompts": "healthy",
+            "sessions": "healthy"
+        }
+    }
+```
+
+#### **Performance Monitoring**
+- **Response Time**: Track reflection generation time
+- **Success Rate**: Monitor successful reflections
+- **Error Rate**: Track and analyze errors
+- **User Engagement**: Monitor user interaction patterns
+
+### Deployment Patterns
+
+#### **Single Application Deployment**
+```yaml
+# Good: Simple deployment configuration
+version: '3.8'
+services:
+  you-reflection-tool:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - XAI_API_KEY=${XAI_API_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./Prompts:/app/Prompts
+    restart: unless-stopped
+```
+
+### Architecture Decision Records
+
+#### **ADR-001: Single Application vs Microservices**
+- **Decision**: Single application architecture
+- **Rationale**: Appropriate complexity for reflection tool use case
+- **Consequences**: Simpler deployment, easier maintenance, better performance
+
+#### **ADR-002: Local Storage vs Database**
+- **Decision**: Local JSON files for MVP
+- **Rationale**: Simpler setup, better privacy, sufficient for MVP
+- **Consequences**: Limited scalability, but appropriate for current needs
+
+#### **ADR-003: Streamlit vs React Frontend**
+- **Decision**: Streamlit for MVP
+- **Rationale**: Faster development, Python integration, sufficient functionality
+- **Consequences**: Less customization, but faster time to market
+
+---
+
+**Last Updated**: December 4, 2024  
+**Version**: 1.0.0  
+**Maintained By**: Peter (Foundation Builder) with Philip (AI/ML Specialist)  
+**Purpose**: Architecture principles for You AI Reflection Tool

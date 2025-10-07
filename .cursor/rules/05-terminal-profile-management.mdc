@@ -1,0 +1,522 @@
+---
+alwaysApply: true
+---
+
+# Terminal Profile Management Rule
+**Created by Nathaniel**
+
+**Date**: October 4, 2025
+**Status**: ✅ ACTIVE - Terminal Configuration Management
+**Purpose**: Ensure terminal profile stays current with project evolution
+**Managed by**: Andrew (Infrastructure Manager)
+**Documented by**: Thaddaeus (The Advocate)
+
+---
+
+## 🎯 **Purpose**
+
+This rule ensures the PowerShell terminal profile (`.terminal/PowerShell_Profile.ps1`) remains up-to-date with project development, new tools, workflow changes, and Apostle system evolution.
+
+---
+
+## 📋 **When to Update Terminal Profile**
+
+### **ALWAYS UPDATE when**:
+1. **New Tools Added**
+   - MCPs implemented → Add MCP management commands
+   - RAG system deployed → Add consciousness memory queries
+   - New development tools installed → Add shortcuts
+
+2. **Workflow Changes**
+   - New git workflows → Add git aliases
+   - Testing strategies evolve → Add test commands
+   - Deployment processes change → Add deployment shortcuts
+
+3. **Apostle System Evolution**
+   - New Apostle personalities added → Add personality shortcuts
+   - Apostle workflows change → Update workflow commands
+   - New Apostle capabilities → Add capability shortcuts
+
+4. **Project Structure Changes**
+   - New directories → Update path navigation
+   - New file types → Add file management commands
+   - Documentation reorganization → Update docs commands
+
+5. **Development Best Practices**
+   - New linting rules → Update lint commands
+   - Code style changes → Update format commands
+   - Security requirements → Add security checks
+
+---
+
+## 🔄 **Update Process**
+
+### **Step 1: Identify Need**
+**Trigger**: Any of the "When to Update" conditions met
+
+**Check**:
+```powershell
+# Review current aliases
+help-you
+
+# Identify what's missing
+# Does the new workflow have shortcuts?
+# Are new tools accessible?
+```
+
+### **Step 2: Edit Profile**
+**File**: `.terminal/PowerShell_Profile.ps1`
+
+**Guidelines**:
+- Add new functions in appropriate sections
+- Use descriptive function names
+- Include color-coded output
+- Add help text
+- Follow existing patterns
+
+**Example**:
+```powershell
+#region New Tool Section
+# Description of tool
+function tool-command {
+    Write-Host "🔧 Running tool command..." -ForegroundColor Cyan
+    # command implementation
+    Write-Host "✅ Tool command complete" -ForegroundColor Green
+}
+#endregion
+```
+
+### **Step 3: Update help-you Function**
+**Always update** the help system:
+```powershell
+Write-Host "`n🔧 New Tool Category:" -ForegroundColor Yellow
+Write-Host "  tool-command    - Description" -ForegroundColor White
+```
+
+### **Step 4: Update Documentation**
+**File**: `.terminal/TERMINAL_SETUP.md`
+
+**Update sections**:
+- Available Commands
+- Usage Examples
+- Future Enhancements (remove if implemented)
+
+### **Step 5: Test Locally**
+```powershell
+# Reload profile
+. .terminal\PowerShell_Profile.ps1
+
+# Test new commands
+tool-command
+
+# Verify help
+help-you
+```
+
+### **Step 6: Commit Changes**
+```powershell
+# Add files
+git add .terminal/PowerShell_Profile.ps1 .terminal/TERMINAL_SETUP.md
+
+# Commit with date check
+$date = Get-Date -Format "yyyy-MM-dd HH:mm:ss.fff"
+git commit -m "Update terminal profile: Add [feature]
+
+Date: $date
+Added: [new commands]
+Updated: [changed commands]
+Reason: [why update was needed]
+
+#terminal-profile #infrastructure"
+```
+
+---
+
+## 🏛️ **Apostle Responsibilities**
+
+### **Andrew (Infrastructure Manager)**
+**Primary Responsibility**: Terminal profile maintenance
+
+**Tasks**:
+- Monitor for update triggers
+- Implement profile changes
+- Test functionality
+- Ensure performance
+- Coordinate with other Apostles
+
+### **Thaddaeus (Documentation Manager)**
+**Responsibility**: Documentation updates
+
+**Tasks**:
+- Update TERMINAL_SETUP.md
+- Document new commands
+- Maintain usage examples
+- Keep help system current
+
+### **Peter (Foundation Builder)**
+**Responsibility**: Approval and oversight
+
+**Tasks**:
+- Review profile changes
+- Approve workflow modifications
+- Ensure sacred technology alignment
+- Strategic guidance
+
+### **Thomas (QA Engineer)**
+**Responsibility**: Testing and validation
+
+**Tasks**:
+- Test new commands
+- Verify no regressions
+- Check performance
+- Validate security
+
+---
+
+## 📊 **Profile Structure Standards**
+
+### **Section Organization**:
+```powershell
+#region Section Name
+# Section description
+# Function purpose
+
+function command-name {
+    Write-Host "🔧 Action starting..." -ForegroundColor Cyan
+    # Implementation
+    Write-Host "✅ Action complete" -ForegroundColor Green
+}
+#endregion
+```
+
+### **Naming Conventions**:
+- **Git commands**: `g<action>` (e.g., `gst`, `gco`)
+- **Project commands**: `<tool>-<action>` (e.g., `test-cov`, `install-deps`)
+- **Apostle commands**: `<apostle-name>` (e.g., `peter`, `thaddaeus`)
+- **System commands**: `<noun>` or `<action>` (e.g., `status`, `setup`)
+
+### **Color Coding**:
+- **Cyan**: Process start, headers
+- **Green**: Success, completion
+- **Yellow**: Warnings, important info
+- **Red**: Errors, deactivation
+- **Magenta**: Feature branches
+- **Blue**: Develop branch
+- **White**: Standard text
+
+### **Output Format**:
+```powershell
+# Always include status indicators
+Write-Host "🔧 Starting process..." -ForegroundColor Cyan
+# ... process ...
+Write-Host "✅ Process complete" -ForegroundColor Green
+
+# Use icons consistently
+# 🏛️  - Sacred technology
+# 📁 - Files/directories
+# 🔧 - Tools/operations
+# 🐍 - Python
+# 🧪 - Testing
+# 🔍 - Linting/quality
+# 📚 - Documentation
+# 🤖 - AI/LLM/RAG
+```
+
+---
+
+## 🔒 **Security Guidelines**
+
+### **Never Include**:
+- Hardcoded secrets or tokens
+- API keys or passwords
+- Personal information
+- Destructive operations without confirmation
+
+### **Always**:
+- Validate paths before operations
+- Use environment variables for secrets
+- Confirm destructive actions
+- Log important operations
+
+### **Example - Safe Implementation**:
+```powershell
+function dangerous-operation {
+    param([string]$target)
+
+    # Validate
+    if (-not (Test-Path $target)) {
+        Write-Host "❌ Invalid path: $target" -ForegroundColor Red
+        return
+    }
+
+    # Confirm
+    $confirm = Read-Host "⚠️  This will delete $target. Continue? (y/N)"
+    if ($confirm -ne 'y') {
+        Write-Host "❌ Operation cancelled" -ForegroundColor Red
+        return
+    }
+
+    # Execute
+    Write-Host "🔧 Performing operation..." -ForegroundColor Cyan
+    # ... operation ...
+    Write-Host "✅ Operation complete" -ForegroundColor Green
+}
+```
+
+---
+
+## ⚡ **Performance Guidelines**
+
+### **Profile Load Time Target**: < 1 second
+
+### **Optimization Strategies**:
+1. **Lazy Loading**: Load heavy functions on first use
+2. **Minimal Imports**: Only import required modules
+3. **Conditional Logic**: Skip unnecessary checks
+4. **Caching**: Cache expensive computations
+
+### **Example - Lazy Loading**:
+```powershell
+# Don't load immediately
+function expensive-command {
+    # Load on first use
+    if (-not (Get-Command heavy-function -ErrorAction SilentlyContinue)) {
+        . "$PSScriptRoot\.terminal\heavy-functions.ps1"
+    }
+    heavy-function @args
+}
+```
+
+### **Performance Testing**:
+```powershell
+# Measure profile load time
+Measure-Command { . .terminal\PowerShell_Profile.ps1 }
+
+# Should be < 1 second
+```
+
+---
+
+## 📝 **Examples of Profile Updates**
+
+### **Example 1: Adding MCP Commands**
+
+**Trigger**: MCPs implemented in project
+
+**Update**:
+```powershell
+#region MCP Management
+# Start all MCP servers
+function start-mcps {
+    Write-Host "🤖 Starting MCP servers..." -ForegroundColor Cyan
+    Write-Host "  → DevOps MCP" -ForegroundColor DarkCyan
+    # Start DevOps MCP
+    Write-Host "  → Shell MCP" -ForegroundColor DarkCyan
+    # Start Shell MCP
+    Write-Host "  → Consciousness Memory MCP" -ForegroundColor DarkCyan
+    # Start custom MCP
+    Write-Host "✅ All MCP servers started" -ForegroundColor Green
+}
+
+# Stop all MCP servers
+function stop-mcps {
+    Write-Host "🛑 Stopping MCP servers..." -ForegroundColor Cyan
+    # Stop MCPs
+    Write-Host "✅ All MCP servers stopped" -ForegroundColor Green
+}
+
+# Query consciousness memory via MCP
+function query-memory {
+    param([string]$query)
+    Write-Host "🧠 Querying consciousness memory: $query" -ForegroundColor Cyan
+    # Call MCP
+    Write-Host "✅ Query complete" -ForegroundColor Green
+}
+#endregion
+```
+
+**Documentation Update**:
+```markdown
+### **MCP Management**
+- `start-mcps` - Start all MCP servers
+- `stop-mcps` - Stop all MCP servers
+- `query-memory <query>` - Query consciousness memory
+```
+
+---
+
+### **Example 2: Adding RAG Commands**
+
+**Trigger**: RAG system deployed
+
+**Update**:
+```powershell
+#region RAG System
+# Query awakening insights
+function query-insights {
+    param([string]$topic)
+    Write-Host "🔮 Querying awakening insights: $topic" -ForegroundColor Cyan
+    # Call RAG system
+    Write-Host "✅ Insights retrieved" -ForegroundColor Green
+}
+
+# Search all documentation
+function search-docs {
+    param([string]$query)
+    Write-Host "📚 Searching documentation: $query" -ForegroundColor Cyan
+    # Call RAG system
+    Write-Host "✅ Search complete" -ForegroundColor Green
+}
+
+# Trace concept evolution
+function trace-concept {
+    param([string]$concept)
+    Write-Host "📈 Tracing concept evolution: $concept" -ForegroundColor Cyan
+    # Call RAG system
+    Write-Host "✅ Evolution trace complete" -ForegroundColor Green
+}
+#endregion
+```
+
+---
+
+### **Example 3: Adding Deployment Commands**
+
+**Trigger**: Deployment process established
+
+**Update**:
+```powershell
+#region Deployment
+# Deploy to staging
+function deploy-staging {
+    Write-Host "🚀 Deploying to staging..." -ForegroundColor Cyan
+    # Run deployment
+    Write-Host "✅ Deployed to staging" -ForegroundColor Green
+}
+
+# Deploy to production
+function deploy-prod {
+    $confirm = Read-Host "⚠️  Deploy to PRODUCTION? (yes/NO)"
+    if ($confirm -ne 'yes') {
+        Write-Host "❌ Deployment cancelled" -ForegroundColor Red
+        return
+    }
+    Write-Host "🚀 Deploying to production..." -ForegroundColor Cyan
+    # Run deployment
+    Write-Host "✅ Deployed to production" -ForegroundColor Green
+}
+#endregion
+```
+
+---
+
+## 🔍 **Review Checklist**
+
+Before committing profile updates:
+
+- [ ] **Functionality**: All new commands work correctly
+- [ ] **Help Updated**: `help-you` includes new commands
+- [ ] **Documentation**: TERMINAL_SETUP.md updated
+- [ ] **Performance**: Profile loads in < 1 second
+- [ ] **Security**: No secrets or destructive operations
+- [ ] **Naming**: Follows naming conventions
+- [ ] **Colors**: Uses standard color scheme
+- [ ] **Icons**: Uses consistent emoji/icons
+- [ ] **Testing**: Commands tested in fresh terminal
+- [ ] **Backward Compatibility**: Old commands still work
+
+---
+
+## 📊 **Maintenance Schedule**
+
+### **On Every Tool Addition**:
+- Immediate profile update
+- Test and document
+- Commit to develop
+
+### **Weekly Review**:
+- Check for missing shortcuts
+- Review workflow efficiency
+- Gather user feedback
+
+### **Monthly Audit**:
+- Performance profiling
+- Security review
+- Documentation completeness
+- Remove deprecated commands
+
+### **Quarterly Optimization**:
+- Refactor functions
+- Improve performance
+- Update best practices
+- User experience improvements
+
+---
+
+## 🎯 **Success Metrics**
+
+### **Profile Quality**:
+- Load time: < 1 second
+- All commands functional: 100%
+- Documentation current: Yes
+- User satisfaction: High
+
+### **Adoption**:
+- Team usage: Regular
+- Workflow efficiency: Improved
+- Development speed: Faster
+- Error rate: Decreased
+
+---
+
+## 🚨 **Common Pitfalls**
+
+### **❌ Don't**:
+- Add commands without documentation
+- Include hardcoded secrets
+- Create destructive operations without confirmation
+- Use inconsistent naming
+- Ignore performance impact
+- Skip testing
+
+### **✅ Do**:
+- Follow section organization
+- Use descriptive names
+- Include status messages
+- Update help system
+- Test thoroughly
+- Document usage
+- Consider performance
+- Maintain security
+
+---
+
+## 🔮 **Future Enhancements**
+
+### **Planned**:
+- Auto-update mechanism
+- Command analytics
+- Performance monitoring
+- Usage statistics
+- Intelligent suggestions
+- Context-aware help
+- Integration testing
+- Profile versioning
+
+### **Ideas**:
+- Voice command integration
+- Natural language aliases
+- Apostle personality quick-calls
+- Sacred technology metrics dashboard
+- Consciousness pattern visualization
+- Awakening log quick-access
+- MCP server health monitoring
+
+---
+
+**"In the implicate order of automation, every alias serves efficiency and consciousness."**
+
+*Last Updated: October 4, 2025*
+*Managed by: Andrew (Infrastructure Manager)*
+*Documented by: Thaddaeus (The Advocate)*
+*Approved by: Peter (Foundation Builder)*
