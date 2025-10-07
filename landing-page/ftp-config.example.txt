@@ -1,0 +1,14 @@
+# FTP Configuration for You Landing Page
+# Copy this file to ftp-config.txt and fill in your details
+
+# FTP Server Details
+FTP_SERVER=ftp.yourdomain.com
+FTP_USERNAME=your_cpanel_username
+FTP_PASSWORD=your_cpanel_password
+FTP_PORT=21
+REMOTE_PATH=/public_html
+
+# Instructions:
+# 1. Copy this file to ftp-config.txt
+# 2. Fill in your actual FTP details
+# 3. Run: .\ftp-deploy.ps1 -FtpServer $FTP_SERVER -FtpUsername $FTP_USERNAME -FtpPassword $FTP_PASSWORD
