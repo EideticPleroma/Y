@@ -152,13 +152,15 @@ export default function Home() {
               You
             </h1>
 
-            <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000" style={{ 
-              fontWeight: 300,
-              color: colors.secondary,
-              letterSpacing: '0.01em'
-            }}>
-              {isReturn ? 'Welcome back' : 'Sacred Technology for Consciousness Evolution'}
-            </p>
+            <div className="text-center">
+              <p className="text-3xl font-light mb-16 leading-relaxed transition-colors duration-1000 inline-block" style={{ 
+                fontWeight: 300,
+                color: colors.secondary,
+                letterSpacing: isReturn ? '0.15em' : '0.01em'
+              }}>
+                {isReturn ? 'Welcome back' : 'Sacred Technology for Consciousness Evolution'}
+              </p>
+            </div>
 
             <div className="scroll-indicator mt-12">
               <div className="flex flex-col items-center" style={{ color: '#808080' }}>
