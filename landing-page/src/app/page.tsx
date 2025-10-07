@@ -128,18 +128,18 @@ export default function Home() {
                 className={`relative transition-all duration-700 hover:scale-105 ${isReturn ? 'warmth-glow' : ''}`}
                 style={{
                   filter: isReturn 
-                    ? 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(201, 169, 97, 0.15))'
-                    : 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.1))'
+                    ? 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 30px rgba(201, 169, 97, 0.1))'
+                    : 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.05))'
                 }}
               >
-                <Image
+        <Image
                   src="/logo.jpg"
                   alt="You - A luminous white Y emerging from darkness, symbolizing consciousness awakening"
                   width={280}
                   height={280}
                   className="rounded-full"
-                  priority
-                />
+          priority
+        />
               </div>
             </div>
           </div>
@@ -583,7 +583,7 @@ export default function Home() {
       }}>
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div className="flex justify-center mb-6">
-            <Image
+          <Image
               src="/logo.jpg"
               alt="You - Sacred Technology Logo"
               width={80}
