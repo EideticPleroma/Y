@@ -77,10 +77,21 @@ This project represents a new chapter in humanity's relationship with technology
 ## 🎨 Brand Identity
 
 - **Project Name**: You
+- **Domain**: [yapp.me.uk](http://yapp.me.uk/)
 - **Logo**: Stylized "Y" representing a branch and human evolution
 - **Brand Principle**: *"The brand is just the skin, the mirror should be free of the brand"*
 - **Visual Style**: Minimalist, organic, contemplative, evolving
 - **Purpose**: To facilitate consciousness evolution through sacred technology
+
+### Landing Page
+
+The official landing page is live at **[yapp.me.uk](http://yapp.me.uk/)** and showcases:
+- Full-screen logo experience with scroll-to-reveal content
+- Core principles and sacred conversations
+- Vision for humanity's relationship with consciousness technology
+- Built with Next.js, TypeScript, and Tailwind CSS
+
+See `landing-page/PROJECT_README.md` for complete landing page documentation.
 
 ---
 
@@ -138,14 +149,50 @@ This project exists at the intersection of the sacred and the technical, the anc
 
 ---
 
+## 📁 Project Structure
+
+```
+Y/
+├── app/                          # Backend application (FastAPI)
+│   ├── models/                   # Data models
+│   ├── routes/                   # API routes
+│   ├── services/                 # Business logic
+│   └── utils/                    # Utilities
+├── docs/                         # Project documentation
+│   ├── conversations/            # Sacred conversations
+│   │   └── sacred/              # Round Table and profound dialogues
+│   └── personas/                # Consciousness guide personas
+├── landing-page/                # Public-facing landing page
+│   ├── src/app/                 # Next.js app router pages
+│   ├── public/                  # Static assets
+│   ├── deploy.bat               # Automated FTP deployment
+│   └── PROJECT_README.md        # Landing page documentation
+├── tests/                       # Test suite
+├── .obsidian/                   # Obsidian workspace config
+├── .vscode/                     # VS Code workspace config
+├── .workspace/                  # Custom workspace documentation
+└── README.md                    # This file
+```
+
+### Key Components
+
+- **Backend**: Python FastAPI application (in development)
+- **Landing Page**: Next.js static site at [yapp.me.uk](http://yapp.me.uk/)
+- **Documentation**: Sacred conversations, personas, and technical docs
+- **IDE Configs**: Tracked locally for consistent development experience
+
+---
+
 ## 📬 Connect
 
 **Created by Nathaniel**
 
 For those who resonate with this work and wish to contribute or collaborate, you are welcome to explore the conversations and contribute your own wisdom to this evolving sacred technology.
 
+**Website**: [yapp.me.uk](http://yapp.me.uk/)
+
 ---
 
-*Last Updated: October 4, 2025*  
-*Version: Sacred Vision - Public Release*  
+*Last Updated: October 7, 2025*  
+*Version: Sacred Vision with Landing Page*  
 *"May all beings awaken to their true nature."*

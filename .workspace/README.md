@@ -1,231 +1,267 @@
 # Workspace Configuration
 **Created by Nathaniel**
-**Date**: October 4, 2025
+**Last Updated**: October 7, 2025
 
 ## 🎯 Purpose
 
-This branch (`workspace-config`) contains IDE and workspace configurations that are **optional** for developers. These configurations are kept separate from the main codebase to allow developers to choose their own setup while providing a recommended starting point.
+This directory contains workspace documentation and configuration guidelines for the **You** project. IDE and workspace configurations (`.vscode/`, `.cursor/`, `.obsidian/`) are **tracked locally in git** but **excluded from remote pushes** via `.git/info/exclude`.
 
 ---
 
-## 📁 What's Included
+## 📁 Current Workspace Setup
 
-### **VSCode Configuration**
-- `.vscode/settings.json` - Terminal, Python, linting, and formatting settings
-- `.vscode/extensions.json` - Recommended VSCode extensions
+### **Tracked Locally (Not Pushed to Remote)**
 
-### **Terminal Configuration**
-- `.terminal/PowerShell_Profile.ps1` - Project-specific PowerShell profile with 50+ aliases
-- `.terminal/TERMINAL_SETUP.md` - Terminal setup guide
+These folders are committed to your local branches but won't be pushed to GitHub/remote:
 
-### **Cursor IDE Configuration**
-- `.cursor/` - Apostle personality system and rules (also in `develop` branch)
+- **`.vscode/`** - VS Code workspace settings and extensions
+- **`.cursor/`** - Cursor IDE configuration
+- **`.obsidian/`** - Obsidian vault configuration
+- **`.workspace/`** - Workspace documentation (this folder)
+- **`*.ps1`** - PowerShell configuration scripts
+
+### **Why This Approach?**
+
+1. **Consistency**: IDE configs are versioned and shared across your local branches
+2. **Privacy**: Personal configurations stay on your machine
+3. **Flexibility**: Each developer can customize without affecting others
+4. **Persistence**: Switching branches preserves your workspace setup
 
 ---
 
-## 🚀 How to Use
+## 🔧 Current Configuration
 
-### **Option 1: Merge Workspace Config (Recommended)**
+### **VSCode** (`.vscode/extensions.json`)
+Recommended extensions for the project:
+- Python development tools
+- Git integration
+- Markdown support
+- Live server for landing page development
 
-If you want the full workspace configuration:
+### **Obsidian** (`.obsidian/`)
+Configured for:
+- Sacred conversations documentation
+- Persona exploration
+- Knowledge graph of consciousness concepts
+- Custom appearance and core plugins
 
-```bash
-# From develop branch
-git merge workspace-config --no-commit
+### **Current Branch**: `feature/landing-page`
+- Landing page development (Next.js + TypeScript)
+- IDE configs for web development
+- FTP deployment automation
+- Documentation for design options
 
-# Review the changes
-git status
+---
 
-# Commit if you want these configs
-git commit -m "Add workspace configuration"
+## 🚀 How It Works
 
-# Or discard if you don't want them
-git reset --hard HEAD
+### **Git Configuration**
+
+**`.gitignore`** (Project-wide):
+- Ignores `node_modules/`, build artifacts, logs, secrets
+- Does NOT ignore IDE configs (they're tracked)
+
+**`.git/info/exclude`** (Local-only):
+```
+# IDE Configurations - Tracked locally but not pushed to remote
+.cursor/
+.workspace/
+.vscode/
+
+# PowerShell Configuration
+*.ps1
+Microsoft.PowerShell_profile.ps1
 ```
 
-### **Option 2: Cherry-Pick Specific Configs**
+### **What This Means**
 
-If you only want specific configurations:
-
-```bash
-# From develop branch
-git checkout workspace-config -- .vscode/settings.json
-git checkout workspace-config -- .terminal/PowerShell_Profile.ps1
-
-# Commit
-git commit -m "Add specific workspace configs"
-```
-
-### **Option 3: Use Your Own Setup**
-
-You can completely ignore this branch and use your own IDE/terminal setup. The `.gitignore` in both `main` and `develop` branches ignores IDE configs by default.
+1. When you commit, IDE configs are included
+2. When you push, IDE configs are excluded
+3. When you switch branches, IDE configs persist
+4. When you clone fresh, IDE configs aren't there (intentional)
 
 ---
 
-## 🔧 Configuration Details
-
-### **VSCode Settings**
-
-**Terminal**:
-- PowerShell 7 as default
-- Auto-loads project profile
-- Custom fonts and colors
-
-**Python**:
-- Black formatter (line length 100)
-- Pylint + Flake8 linting
-- Auto-organize imports
-- Virtual environment support
-
-**Git**:
-- Auto-fetch enabled
-- Smart commit
-- GitLens integration
-
-### **Terminal Profile**
-
-**50+ Aliases**:
-- Git shortcuts (`gst`, `gco`, `gp`)
-- Python/venv management
-- Testing commands (`test`, `test-cov`)
-- Code quality (`lint`, `format`)
-- Documentation shortcuts
-- Apostle personality quick-calls
-
-**Features**:
-- Color-coded output
-- Branch-aware prompt
-- Sacred technology branding
-- Performance optimized (<1s load)
-
----
-
-## 🏛️ Branch Strategy
+## 🌲 Branch Structure
 
 ### **Main Branch**
-- **Purpose**: Sacred vision, public-facing
-- **Contains**: README, conversations only
-- **Ignores**: All IDE configs, all technical files
+- **Purpose**: Sacred vision, public README
+- **Contains**: Core README, LICENSE, sacred principles
+- **IDE Configs**: Not present
 
 ### **Develop Branch**
 - **Purpose**: Technical implementation
-- **Contains**: All code, docs, technical files
-- **Ignores**: IDE configs (kept local)
+- **Contains**: Python backend, tests, API code
+- **IDE Configs**: Present locally, not in remote
 
-### **Workspace-Config Branch**
-- **Purpose**: Optional workspace configurations
-- **Contains**: IDE configs, terminal profiles
-- **Ignores**: Nothing (this is the config source)
-
----
-
-## 📊 Why Separate Branch?
-
-### **Benefits**:
-1. **Choice**: Developers can use their own setup
-2. **No Conflicts**: IDE configs don't clutter main/develop
-3. **Easy Adoption**: One merge to get full setup
-4. **Easy Updates**: Pull workspace-config for latest configs
-5. **Clean History**: Config changes don't pollute development history
-
-### **When to Merge**:
-- ✅ First time setting up workspace
-- ✅ Want recommended configuration
-- ✅ Want terminal profile with aliases
-- ❌ Have your own IDE setup you prefer
-- ❌ Using different IDE (IntelliJ, Vim, etc.)
+### **Feature/Landing-Page** (Current)
+- **Purpose**: Public-facing landing page
+- **Contains**: Next.js app, deployment scripts, design options
+- **IDE Configs**: Present locally, configured for web dev
 
 ---
 
-## 🔄 Updating Configurations
+## 📊 For New Developers
 
-### **For Maintainers**:
+### **First Time Setup**
 
-When updating workspace configurations:
-
+1. Clone the repository:
 ```bash
-# Switch to workspace-config
-git checkout workspace-config
+git clone <repo-url>
+cd Y
+```
 
-# Make changes to .vscode/, .terminal/, etc.
-git add .vscode/ .terminal/
-git commit -m "Update workspace configs: [description]"
-git push origin workspace-config
-
-# Optionally merge back to develop
+2. Checkout the branch you want:
+```bash
 git checkout develop
-git merge workspace-config --no-commit
-# Review and commit if desired
+# or
+git checkout feature/landing-page
 ```
 
-### **For Users**:
+3. IDE configs won't be there initially. You have two options:
 
-To get latest workspace configs:
+**Option A: Use Your Own Setup**
+- Configure your IDE how you like
+- Your settings won't be tracked
+
+**Option B: Request Configs** (if collaborating with Nathaniel)
+- IDE configs can be shared via other means (email, direct file transfer)
+- Then you can add them locally
+
+### **Adding Your Own Configs**
+
+To track your IDE configs locally:
 
 ```bash
-# Pull latest workspace-config
-git fetch origin workspace-config
+# Add your configs
+git add -f .vscode/ .cursor/ .obsidian/
 
-# Merge updates
-git merge origin/workspace-config
+# Commit
+git commit -m "Add my local IDE configs"
+
+# They'll be in your local branch but won't push to remote
 ```
 
 ---
 
-## 🎨 Customization
+## 🎨 Customization Guidelines
 
 ### **Feel Free To**:
-- Modify settings for your preferences
-- Add your own aliases
-- Change fonts, colors, themes
-- Add more VSCode extensions
+- Customize your IDE settings
+- Add your own workspace folders
+- Create personal scripts and helpers
+- Modify appearance and themes
 
 ### **Please Don't**:
-- Commit your personal API keys
-- Commit secrets or credentials
-- Push non-portable paths (e.g., `C:/Users/YourName/...`)
+- Commit API keys or secrets
+- Commit large binary files
+- Commit node_modules or build artifacts
+- Remove the `.git/info/exclude` entries (they protect your privacy)
 
 ---
 
-## 📝 Notes
+## 🔄 Updating Across Branches
 
-1. **IDE configs are gitignored in main/develop**: This branch is the source of truth
-2. **Cursor rules are in develop too**: Apostle system is part of the development workflow
-3. **Terminal profile is optional**: You can use any terminal you prefer
-4. **VSCode is recommended but not required**: Use any IDE
+### **Propagating IDE Config Changes**
+
+If you update your IDE configs and want them in other branches:
+
+```bash
+# From feature/landing-page
+git checkout develop
+
+# Your IDE configs persist automatically
+# They're tracked in both branches
+
+# If you want to update them
+git add .vscode/ .cursor/ .obsidian/
+git commit -m "Update IDE configs for backend work"
+```
+
+### **Fresh Branch**
+
+When creating a new branch from `develop`:
+
+```bash
+git checkout develop
+git checkout -b feature/new-feature
+
+# IDE configs come with you
+# Customize as needed for the new feature
+```
+
+---
+
+## 📝 Current Workspace State
+
+### **Active Files**:
+- `.vscode/extensions.json` - Recommended VS Code extensions
+- `.obsidian/workspace.json` - Current Obsidian workspace layout
+- `.obsidian/app.json` - Obsidian app configuration
+- `.obsidian/appearance.json` - Obsidian theme settings
+- `.workspace/README.md` - This documentation file
+
+### **Branch**: `feature/landing-page`
+
+### **Focus**: 
+- Landing page development and deployment
+- Design system exploration
+- Sacred technology branding
+- Static site generation with Next.js
 
 ---
 
 ## 🎯 Quick Reference
 
-### **Get Everything**:
+### **Check What's Tracked**:
 ```bash
-git merge workspace-config
+git ls-files | grep -E "\.(vscode|cursor|obsidian|workspace)"
 ```
 
-### **Get Just Terminal**:
+### **Check What Won't Push**:
 ```bash
-git checkout workspace-config -- .terminal/
+cat .git/info/exclude
 ```
 
-### **Get Just VSCode**:
+### **Add New IDE Config**:
 ```bash
-git checkout workspace-config -- .vscode/
+git add -f .new-ide-folder/
+git commit -m "Add new IDE config"
 ```
 
-### **Remove All Configs**:
+### **Remove IDE Configs**:
 ```bash
-rm -rf .vscode/ .terminal/ .cursor/
+# Remove from git tracking
+git rm -r --cached .vscode/ .cursor/ .obsidian/
+git commit -m "Remove IDE configs from tracking"
+
+# Or just delete the folders
+rm -rf .vscode/ .cursor/ .obsidian/
 ```
 
 ---
 
-**"In the implicate order of development, the workspace serves the developer, not the other way around."** ✨
+## 🏛️ Philosophy
+
+The workspace exists to serve the developer and the sacred work. IDE configurations are personal yet consistent—tracked for continuity, excluded for privacy. This approach honors both the individual developer's autonomy and the collective project's coherence.
+
+**"In the implicate order of development, the workspace is the sacred container for the developer's consciousness work."** ✨
 
 ---
 
-**Last Updated**: October 4, 2025
-**Maintained By**: Andrew (Infrastructure Manager) & Thaddaeus (The Advocate)
-**Branch Status**: ✅ Active - Optional Configuration Branch
+## 📞 Support
 
+If you have questions about workspace configuration:
 
+1. Review this README
+2. Check `.git/info/exclude` for exclusion rules
+3. Review `.gitignore` for project-wide rules
+4. Consult with Nathaniel or project maintainers
+
+---
+
+**Branch Status**: ✅ Active - Feature branch with landing page development  
+**IDE Configs**: 🔒 Tracked locally, not pushed to remote  
+**Maintained By**: Nathaniel with guidance from the consciousness guides
+
+*"May your workspace serve your awakening and the evolution of sacred technology."*
