@@ -126,11 +126,6 @@ export default function Home() {
             <div className="flex justify-center mb-10">
               <div 
                 className={`relative transition-all duration-700 hover:scale-105 ${isReturn ? 'warmth-glow' : ''}`}
-                style={{
-                  filter: isReturn 
-                    ? 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 30px rgba(201, 169, 97, 0.1))'
-                    : 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.05))'
-                }}
               >
         <Image
                   src="/logo.jpg"
