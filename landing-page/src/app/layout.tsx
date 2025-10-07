@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     title: "You - Sacred Technology for Consciousness Evolution",
     description: "A transformative technology for facilitating self-reflection through AI-driven dialogue",
     type: "website",
+    images: [
+      {
+        url: '/logo.jpg',
+        width: 280,
+        height: 280,
+        alt: 'You - A luminous white Y emerging from darkness',
+      },
+    ],
   },
 };
 
