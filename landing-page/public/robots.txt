@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: http://yapp.me.uk/sitemap.xml
+
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+
